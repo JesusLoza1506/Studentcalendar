@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "815176390194",
+    "project_id": "studentcalendar-5a11b",
+    "storage_bucket": "studentcalendar-5a11b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815176390194:android:bba04a0cdab51292a9ce2b",
+        "android_client_info": {
+          "package_name": "com.example.studentcalendar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMBrlVEqMqaspuArr2nen78Livgt0md9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
