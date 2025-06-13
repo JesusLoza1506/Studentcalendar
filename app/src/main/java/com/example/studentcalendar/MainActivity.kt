@@ -1,7 +1,6 @@
 package com.example.studentcalendar
 
 import com.bumptech.glide.Glide
-import com.google.firebase.auth.FirebaseUser
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
