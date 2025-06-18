@@ -1,13 +1,18 @@
 package com.example.studentcalendar
 
-import com.bumptech.glide.Glide
-import com.google.firebase.auth.FirebaseUser
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.studentcalendar.databinding.ActivityMainBinding
-import com.google.firebase.auth.FirebaseAuth
 import com.google.android.gms.auth.api.identity.Identity
+import com.google.firebase.auth.FirebaseAuth
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -16,6 +21,19 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
 
+    private val requestPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
+            if (isGranted) {
+                // Permiso concedido
+                Toast.makeText(this, "Permiso de notificaciones concedido", Toast.LENGTH_SHORT).show()
+                Log.d("MainActivity", "Permiso de POST_NOTIFICATIONS concedido por el usuario")
+            } else {
+                // Permiso denegado
+                Toast.makeText(this, "Permiso de notificaciones denegado. Las alarmas no se mostrarán.", Toast.LENGTH_LONG).show()
+                Log.w("MainActivity", "Permiso de POST_NOTIFICATIONS denegado por el usuario")
+            }
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -23,8 +41,8 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         val user = auth.currentUser
+        
 
-        // ✅ VERIFICAR SI EL USUARIO ESTÁ AUTENTICADO
         if (user == null) {
             val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -33,11 +51,9 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // ✅ MOSTRAR NOMBRE DE USUARIO
         val displayName = user.displayName ?: "Usuario"
         binding.tvUserName.text = "👋 Hola, $displayName"
 
-        // ✅ MOSTRAR FOTO DE PERFIL (si existe)
         val photoUrl = user.photoUrl
         if (photoUrl != null) {
             Glide.with(this)
@@ -49,15 +65,12 @@ class MainActivity : AppCompatActivity() {
             binding.imgProfile.setImageResource(R.drawable.user)
         }
 
-        // ✅ FECHA ACTUAL EN ESPAÑOL
         val fechaActual = SimpleDateFormat("EEEE d 'de' MMMM", Locale("es", "ES")).format(Date())
         binding.tvTodayDate.text = "📅 Hoy es: $fechaActual"
 
-        // ✅ EJEMPLO ESTÁTICO DE PRÓXIMA CLASE
         binding.tvNextClass.text = "🕒 Próxima clase: Álgebra"
         binding.tvNextClassRoom.text = "🏫 Aula B201 – 10:00 AM"
 
-        // ✅ INTENTS DE BOTONES
         binding.btnAddTask.setOnClickListener {
             startActivity(Intent(this, AnadirClaseTareaActivity::class.java))
         }
@@ -82,7 +95,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, AjustesActivity::class.java))
         }
 
-        // ✅ BOTÓN CERRAR SESIÓN
         binding.btnLogout.setOnClickListener {
             val builder = androidx.appcompat.app.AlertDialog.Builder(this)
             builder.setTitle("Cerrar sesión")

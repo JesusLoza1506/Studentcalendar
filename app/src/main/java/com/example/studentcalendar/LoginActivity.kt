@@ -30,7 +30,6 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        // ✅ Verifica si ya hay sesión activa
         if (auth.currentUser != null) {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("uid", auth.currentUser!!.uid)
@@ -39,18 +38,15 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        // ✅ Configura el botón de Google
         val signInButton = binding.btnGoogleSignIn
         signInButton.setSize(SignInButton.SIZE_WIDE)
         signInButton.setColorScheme(SignInButton.COLOR_LIGHT)
 
-        // 🔤 Cambiar texto del botón (aunque Google no lo recomienda oficialmente)
         val buttonText = signInButton.getChildAt(0) as? TextView
         buttonText?.text = "Iniciar sesión con Google"
         buttonText?.setTextColor(ContextCompat.getColor(this, R.color.black)) // o cualquier otro color
 
 
-        // ✅ Configura One Tap Client
         oneTapClient = Identity.getSignInClient(this)
 
         signInRequest = BeginSignInRequest.builder()
@@ -64,7 +60,6 @@ class LoginActivity : AppCompatActivity() {
             .setAutoSelectEnabled(true)
             .build()
 
-        // 🚀 Acción al presionar el botón
         binding.btnGoogleSignIn.setOnClickListener {
             signIn()
         }
