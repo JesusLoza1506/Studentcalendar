@@ -48,6 +48,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.firestore)
+    implementation(libs.androidx.gridlayout)
     dependencies {
         // Core Android
         implementation("androidx.core:core-ktx:1.13.1")
@@ -74,5 +76,4 @@ dependencies {
         androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     }
 }
-
 

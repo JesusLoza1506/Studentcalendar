@@ -20,18 +20,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        /*
+                auth = FirebaseAuth.getInstance()
+                val user = auth.currentUser
 
-        auth = FirebaseAuth.getInstance()
-        val user = auth.currentUser
-
-        // ✅ VERIFICAR SI EL USUARIO ESTÁ AUTENTICADO
-        if (user == null) {
-            val intent = Intent(this, LoginActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
-            return
-        }
+                // ✅ VERIFICAR SI EL USUARIO ESTÁ AUTENTICADO
+                if (user == null) {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                    return
+                }
 
         // ✅ MOSTRAR NOMBRE DE USUARIO
         val displayName = user.displayName ?: "Usuario"
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 .into(binding.imgProfile)
         } else {
             binding.imgProfile.setImageResource(R.drawable.user)
-        }
+        }*/
 
         // ✅ FECHA ACTUAL EN ESPAÑOL
         val fechaActual = SimpleDateFormat("EEEE d 'de' MMMM", Locale("es", "ES")).format(Date())
@@ -59,7 +59,8 @@ class MainActivity : AppCompatActivity() {
 
         // ✅ INTENTS DE BOTONES
         binding.btnAddTask.setOnClickListener {
-            startActivity(Intent(this, AnadirClaseTareaActivity::class.java))
+            val intent = Intent(this, AnadirClaseTareaActivity::class.java)
+            startActivity(intent)
         }
 
         binding.btnViewSchedule.setOnClickListener {

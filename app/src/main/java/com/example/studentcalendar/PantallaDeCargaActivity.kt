@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.studentcalendar.databinding.ActivitySplashBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class SplashActivity : AppCompatActivity() {
+class PantallaDeCargaActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
     private lateinit var auth: FirebaseAuth
