@@ -17,13 +17,13 @@
         android:theme="@style/Theme.Studentcalendar"
         tools:targetApi="31">
 
-        <!-- PantallaDeCargaActivity como pantalla de inicio -->
+        <!-- SplashActivity como pantalla de inicio -->
         <activity
-            android:name=".PantallaDeCargaActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -34,9 +34,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" />
 
-        </activity>
         <activity
             android:name=".AjustesActivity"
             android:exported="false" />
@@ -51,7 +50,7 @@
             android:exported="false" />
         <activity
             android:name=".HorarioSemanalActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".AnadirClaseTareaActivity"
             android:exported="false" />

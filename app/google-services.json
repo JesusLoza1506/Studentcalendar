@@ -12,7 +12,28 @@
           "package_name": "com.example.studentcalendar"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "815176390194-7bcqfqn99pggpk51dqckoeerqpt1vbba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentcalendar",
+            "certificate_hash": "283f54a31dff34cac995ed809877ba4665224651"
+          }
+        },
+        {
+          "client_id": "815176390194-sdnsebpuc351vkfh1eagkgpqcpf80hbp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentcalendar",
+            "certificate_hash": "c655df6a5e2d73a28fdd2ae3274932ac5aa0a76b"
+          }
+        },
+        {
+          "client_id": "815176390194-1l90v13coliamrjkgnf9fpon0huq4lvt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDMBrlVEqMqaspuArr2nen78Livgt0md9w"
@@ -20,7 +41,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815176390194-1l90v13coliamrjkgnf9fpon0huq4lvt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
