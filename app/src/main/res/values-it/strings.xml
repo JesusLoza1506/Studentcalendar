@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KalendU</string>
+    <string name="sin_eventos_internet">Impossibile caricare gli eventi. Connessione internet necessaria.</string>
+
+    <string name="usuario">Utente</string>
+    <string name="hola_usuario">👋 Ciao, %1$s</string>
+    <string name="hoy_es">📅 Oggi è: %1$s</string>
+    <string name="alerta_evento">📡 Avviso evento imminente:</string>
+    <string name="proximo_evento">Prossimo evento</string>
+    <string name="sin_eventos">Nessun evento in programma</string>
+    <string name="btn_nueva_actividad">➕ Pianifica Nuova Attività</string>
+    <string name="nav_home">Menu</string>
+    <string name="btn_ver_horario">Orario</string>
+    <string name="btn_ver_tareas">Modifica</string>
+    <string name="btn_notificaciones">I Miei Avvisi</string>
+    <string name="btn_exportar_pdf">Esporta</string>
+    <string name="btn_configuracion">🛠️ Impostazioni</string>
+    <string name="next_class">Prossima lezione</string>
+    <string name="img_perfil_desc">Immagine profilo utente</string>
+    <string name="default_username_display">👤 Il tuo nome</string>
+    <string name="content_description_user_photo">Foto profilo</string>
+    <string name="toast_user_not_logged_in_error">Utente non loggato.</string>
+
+    <string name="add_event_title">📅 Aggiungi Evento</string>
+    <string name="hint_event_name">Nome evento</string>
+    <string name="hint_classroom">Aula</string>
+    <string name="hint_classroom_optional">Aula (opzionale)</string>
+    <string name="label_event_type">Tipo:</string>
+    <string name="radio_button_class">Lezione</string>
+    <string name="radio_button_task">Compito</string>
+    <string name="label_days_for_classes">Giorni (per lezioni):</string>
+    <string name="day_monday_short">L</string>
+    <string name="day_tuesday_short">A</string>
+    <string name="day_wednesday_short">E</string>
+    <string name="day_thursday_short">G</string>
+    <string name="day_friday_short">V</string>
+    <string name="day_saturday_short">S</string>
+    <string name="day_sunday_short">D</string>
+    <string name="label_repeat_by">Ripeti per:</string>
+    <string name="hint_repeat_weeks_default">-</string>
+    <string name="label_weeks">settimane</string>
+    <string name="start_repetition_date_button">📅 Inizia Ripetizione Da</string>
+    <string name="start_repetition_prefix">Da:</string>
+    <string name="start_time_button">Ora Inizio</string>
+    <string name="end_time_button">Ora Fine</string>
+    <string name="start_time_prefix">Inizio:</string>
+    <string name="end_time_prefix">Fine:</string>
+    <string name="select_date_button">📅 Seleziona Data</string>
+    <string name="date_prefix">Data:</string>
+    <string name="activate_reminder_switch">🔔 Attiva promemoria</string>
+    <string name="color_button">🎨 Colore</string>
+    <string name="select_color_title">Seleziona un colore</string>
+    <string name="save_event_button">✅ SALVA EVENTO</string>
+    <string name="notifications_enabled">Promemoria attivato</string>
+    <string name="notifications_disabled">Promemoria disattivato</string>
+    <string name="toast_permission_granted_reminders_enabled">Permesso concesso, promemoria attivato</string>
+    <string name="toast_permission_denied_reminders_disabled">Permesso negato, promemoria disattivato</string>
+    <string name="toast_enable_exact_alarms_permission">Attiva il permesso delle sveglie esatte nelle impostazioni</string>
+    <string-array name="reminder_options">
+        <item>5 minuti prima</item>
+        <item>10 minuti prima</item>
+        <item>15 minuti prima</item>
+        <item>30 minuti prima</item>
+        <item>60 minuti prima</item>
+    </string-array>
+
+    <string name="reminder_5_minutes_option">5 minuti prima</string>
+    <string name="reminder_10_minutes_option">10 minuti prima</string>
+    <string name="reminder_15_minutes_option">15 minuti prima</string>
+    <string name="reminder_30_minutes_option">30 minuti prima</string>
+    <string name="reminder_60_minutes_option">60 minuti prima</string>
+    <string name="alarm_notification_title">Allarme di KalendU!</string>
+    <string name="alarm_notification_content">È ora del tuo %1$s: %2$s %3$s</string>
+    <string name="alarm_stop_button">Ferma Allarme</string>
+
+
+    <string name="notification_x_minutes_before">Notifica %1$d min prima</string>
+    <string name="toast_complete_required_fields">Compila tutti i campi obbligatori</string>
+    <string name="toast_select_color">Seleziona un colore</string>
+    <string name="toast_select_start_time">Seleziona ora di inizio</string>
+    <string name="toast_select_end_time">Seleziona ora di fine</string>
+    <string name="toast_select_days_for_class">Seleziona almeno un giorno</string>
+    <string name="toast_select_repetition_start_date">Seleziona data di inizio</string>
+    <string name="toast_start_time_after_end_time">L\'ora di inizio non può essere maggiore o uguale a quella di fine</string>
+    <string name="toast_select_task_date">Seleziona una data per il compito</string>
+    <string name="toast_task_date_in_past">La data selezionata è nel passato</string>
+    <string name="toast_user_not_logged_in">Utente non autenticato</string>
+    <string name="toast_classes_saved">✅ Lezione salvata correttamente</string>
+    <string name="toast_task_saved">✅ Compito salvato correttamente</string>
+    <string name="toast_error_saving_classes">❌ Errore nel salvataggio delle lezioni</string>
+    <string name="toast_error_saving_task">❌ Errore nel salvataggio del compito</string>
+    <string name="toast_invalid_class_data">Dati lezione non validi.</string>
+    <string name="action_cancel">Annulla</string>
+    <string name="color_light_blue">Azzurro</string>
+    <string name="color_red">Rosso</string>
+    <string name="color_green">Verde</string>
+    <string name="color_purple">Viola</string>
+    <string name="color_yellow">Giallo</string>
+    <string name="color_turquoise">Turchese</string>
+    <string name="color_dark_orange">Arancione Scuro</string>
+    <string name="color_dark_blue">Blu Scuro</string>
+    <string name="color_silver">Argento</string>
+    <string name="color_dark_purple">Viola Scuro</string>
+    <string name="color_pink">Rosa</string>
+    <string name="color_blue_violet">Blu Violetto</string>
+    <string name="color_sea_green">Verde Mare</string>
+    <string name="color_gold">Oro</string>
+    <string name="color_slate_blue">Blu Ardesia</string>
+    <string name="event_type_class">Lezione</string>
+    <string name="event_type_task">Compito</string>
+    <string-array name="rangos_dias">
+        <item>Lunedì a Venerdì</item>
+        <item>Lunedì a Domenica</item>
+    </string-array>
+
+    <string name="dialog_filter_schedule_title">Filtra Orario</string>
+    <string name="dialog_filter_time_range_label">Intervallo di tempo:</string>
+    <string name="dialog_filter_from_label">Da</string>
+    <string name="dialog_filter_to_label">A</string>
+    <string name="dialog_filter_show_days_label">Mostra giorni:</string>
+    <string name="dialog_filter_mon_to_fri">Lunedì a Venerdì</string>
+    <string name="dialog_filter_mon_to_sun">Lunedì a Domenica</string>
+    <string name="action_apply">Applica</string>
+    <string name="delete_event_title">Elimina Evento</string>
+    <string name="delete_event_message">Vuoi eliminare \"%1$s\"?</string>
+    <string name="action_delete">Elimina</string>
+    <string name="toast_filters_applied">Filtri applicati correttamente</string>
+    <string name="event_deleted">Evento eliminato.</string>
+    <string name="error_deleting_event">Errore nell\'eliminazione dell\'evento</string>
+    <string name="error_loading_events">Errore nel caricamento degli eventi</string>
+
+
+    <string name="title_your_tasks_and_classes">I tuoi Compiti e Lezioni</string>
+    <string name="search_hint_event_name">Cerca evento per nome</string>
+    <string name="title_active_reminders">🗓️ Prossimi Eventi</string>
+    <string name="explanation_reminders">Qui puoi gestire i tuoi compiti e le tue lezioni, modificarli o eliminarli secondo necessità.</string>
+    <string name="no_events_registered">Nessun evento registrato</string>
+    <string name="user_not_authenticated">Utente non autenticato</string>
+    <string name="edit_event_title">✏️ Modifica Evento</string>
+    <string name="hint_event_name_edit">📌 Nome evento</string>
+    <string name="hint_classroom_optional_edit">🏫 Aula (opzionale)</string>
+    <string name="label_event_type_edit">📂 Tipo</string>
+    <string name="label_date_edit">📅 Data</string>
+    <string name="label_start_time_edit">🕐 Ora inizio</string>
+    <string name="label_end_time_edit">🕑 Ora fine</string>
+    <string name="button_color_edit">🎨 Colore</string>
+    <string name="label_days_of_week_class">📆 Giorni di lezione</string>
+    <string name="button_save_changes">💾 Salva modifiche</string>
+    <string name="button_delete_event">🗑️ Elimina evento</string>
+    <string name="cancel_action">Annulla</string>
+    <string name="accept_action">Accetta</string>
+    <string name="select_days_dialog_title">Seleziona giorni</string>
+    <string name="option_only_for_classes">Questa opzione è disponibile solo per lezioni</string>
+    <string name="fill_required_fields">Per favore, compila tutti i campi obbligatori</string>
+    <string name="select_at_least_one_day">Devi selezionare almeno un giorno</string>
+    <string name="event_class_saved_successfully">📚 Lezione salvata con successo</string>
+    <string name="event_task_saved_successfully">✅ Compito salvato con successo</string>
+    <string name="error_saving_changes">Errore nel salvataggio delle modifiche</string>
+    <string name="error_loading_event">Errore nel caricamento dell\'evento</string>
+    <string name="delete_event_confirmation_title">Elimina evento?</string>
+    <string name="delete_event_confirmation_message">Sei sicuro di voler eliminare questo evento?</string>
+    <string name="yes_delete">Sì, elimina</string>
+    <string name="repeated_classes_deleted">Tutte le lezioni ripetute sono state eliminate</string>
+    <string name="day_monday_full">Lunedì</string>
+    <string name="day_tuesday_full">Martedì</string>
+    <string name="day_wednesday_full">Mercoledì</string>
+    <string name="day_thursday_full">Giovedì</string>
+    <string name="day_friday_full">Venerdì</string>
+    <string name="day_saturday_full">Sabato</string>
+    <string name="day_sunday_full">Domenica</string>
+    <string name="not_applicable">N/D</string>
+
+    <string name="title_active_reminders_notifications">🔔 Promemoria Attivi</string>
+    <string name="explanation_reminders_notifications">Puoi modificare o eliminare il promemoria per ogni lezione o compito.</string>
+    <string name="no_active_reminders">Nessun promemoria attivo.</string>
+    <string name="error_loading_events_notifications">Errore nel caricamento degli eventi con promemoria.</string>
+    <string name="no_date_available">Data non disponibile</string>
+    <string name="event_detail_format">📂 %1$s: %2$s\n🕐 %3$s - %4$s\n📅 Giorni: %5$s\n📆 Data: %6$s\n⏰ %7$d min prima</string>
+    <string name="button_modify_reminder">Modifica</string>
+    <string name="button_delete_reminder">Elimina</string>
+    <string name="dialog_title_how_many_minutes">Quanti minuti prima vuoi essere ricordato?</string>
+    <string name="notification_updated_success">Promemoria aggiornato a %1$d minuti prima</string>
+    <string name="error_updating_notification">Errore nell\'aggiornamento del promemoria</string>
+    <string name="dialog_title_delete_reminder">Elimina promemoria?</string>
+    <string name="dialog_message_confirm_delete_reminder">Sei sicuro di voler eliminare il promemoria per \"%1$s\" il %2$s?</string>
+    <string name="yes_delete_button">Sì, elimina</string>
+    <string name="cancel_button">Annulla</string>
+    <string name="reminder_deleted_success">Promemoria eliminato correttamente</string>
+    <string name="error_deleting_reminder">Errore nell\'eliminazione del promemoria</string>
+
+    <string name="export_title">🗓️ Esporta orario settimanale</string>
+    <string name="export_subtitle">Scegli una settimana per esportare il tuo orario</string>
+    <string name="previous_week_button">⬅️</string>
+    <string name="next_week_button">➡️</string>
+    <string name="time_range_from">🕗 Da: %1$s</string>
+    <string name="time_range_to">🕕 A: %1$s</string>
+    <string name="button_generate_pdf">📄 Genera PDF</string>
+    <string name="button_save_local">💾 Salva</string>
+    <string name="button_share">📤 Condividi</string>
+    <string name="pdf_title_schedule">🗓️ ORARIO SETTIMANALE</string>
+    <string name="pdf_user_label">👤 Utente: %1$s</string>
+    <string name="pdf_week_label">📅 Settimana: %1$s</string>
+    <string name="pdf_classroom_label">📍 Aula: %1$s</string>
+    <string name="pdf_default_user_name">Ospite</string>
+    <string name="pdf_preview_description">Anteprima PDF</string>
+    <string name="toast_pdf_generated">✅ PDF generato correttamente</string>
+    <string name="toast_generate_pdf_first">⚠️ Prima genera il PDF</string>
+    <string name="toast_saved_to_documents">💾 Salvato nella cartella %1$s</string>
+    <string name="toast_error_saving_pdf">❌ Errore nel salvataggio del PDF: %1$s</string>
+    <string name="toast_error_saving_locally">❌ Impossibile salvare il PDF localmente: %1$s</string>
+    <string name="toast_error_loading_events">❌ Errore nel caricamento degli eventi</string>
+    <string name="toast_user_name_not_found">⚠️ Impossibile ottenere il nome utente da Firestore</string>
+    <string name="toast_events_loaded">📅 Eventi caricati: %1$d</string>
+    <string name="toast_error_rendering_preview">❌ Errore nel rendering dell\'anteprima: %1$s</string>
+    <string name="toast_logo_not_found">⚠️ Logo non trovato. Verrà utilizzato il titolo predefinito</string>
+    <string name="toast_error_sharing_pdf">❌ Errore nella condivisione del PDF: %1$s</string>
+    <string name="share_pdf_chooser_title">Condividi PDF</string>
+    <string name="time_picker_title">Seleziona un\'ora</string>
+
+
+    <string name="default_username_placeholder">Il tuo nome</string>
+    <string name="btn_ver_editar_perfil">👤 Visualizza/Modifica Profilo</string>
+    <string name="btn_cambiar_modo_oscuro_claro">🌙 Cambia Modalità Scuro/Chiaro</string>
+    <string name="btn_cambiar_idioma">🌐 Cambia Lingua</string>
+    <string name="btn_ver_datos_sincronizados">🔄 Visualizza Dati Sincronizzati</string>
+    <string name="btn_terminos_condiciones">📃 Termini e Condizioni</string>
+    <string name="btn_cerrar_sesion_eliminar_cuenta">🚪 Esci / Elimina dati</string>
+    <string name="dialog_edit_profile_title">Modifica Profilo</string>
+    <string name="dialog_save_button">Salva</string>
+    <string name="dialog_cancel_button">Annulla</string>
+    <string name="toast_name_cannot_be_empty">Il nome non può essere vuoto</string>
+    <string name="toast_profile_updated">Profilo aggiornato correttamente</string>
+    <string name="toast_error_updating_profile">Errore nell\'aggiornamento del profilo</string>
+    <string name="select_image_chooser_title">Seleziona immagine</string>
+    <string name="dialog_change_language_title">Seleziona lingua</string>
+    <string name="dialog_change_language_option_es">Spagnolo</string>
+    <string name="dialog_change_language_option_en">Inglese</string>
+    <string name="dialog_change_language_option_pt_rBR">Portoghese</string>
+    <string name="dialog_change_language_option_it">Italiano</string>
+    <string name="dialog_change_language_option_fr">Francese</string>
+    <string name="dialog_what_to_do_title">Cosa vuoi fare?</string>
+    <string name="dialog_logout_option">Esci</string>
+    <string name="dialog_delete_data_option">Elimina tutti i miei dati</string>
+    <string name="toast_session_closed">Sessione chiusa correttamente</string>
+    <string name="toast_no_active_user">Nessun utente attivo</string>
+    <string name="dialog_confirm_delete_data_title">Sei sicuro?</string>
+    <string name="dialog_confirm_delete_data_message">Questo eliminerà tutti i tuoi dati dal sistema. Questa azione non può essere annullata.</string>
+    <string name="dialog_confirm_delete_data_button">Sì, elimina</string>
+    <string name="toast_data_deleted_successfully">Dati eliminati correttamente</string>
+    <string name="toast_error_deleting_data">Errore nell\'eliminazione dei dati: %1$s</string>
+    <string name="toast_error_deleting_data_fetch">Errore nel recupero dei dati: %1$s</string>
+    <string name="dialog_reauth_title">Conferma identità</string>
+    <string name="dialog_reauth_message">Per eliminare i tuoi dati, dobbiamo prima confermare la tua identità con Google.</string>
+    <string name="dialog_reauth_confirm_button">Continua</string>
+    <string name="toast_reauthentication_success">Identità confermata correttamente</string>
+    <string name="toast_reauthentication_failed">Autenticazione fallita: %1$s</string>
+    <string name="toast_reauthentication_id_token_null">Token di autenticazione nullo</string>
+    <string name="toast_reauthentication_error">Errore di autenticazione: %1$s</string>
+    <string name="toast_reauthentication_cancelled">Autenticazione annullata</string>
+    <string name="toast_deletion_cancelled">Eliminazione annullata</string>
+    <string name="sync_data_title">📡 Dati Sincronizzati</string>
+    <string name="not_available">Non disponibile</string>
+    <string name="unknown">Sconosciuto</string>
+    <string name="no_active_session">⚠️ Nessuna sessione attiva</string>
+    <string name="profile_section_title">👤 Profilo aggiornato</string>
+    <string name="profile_name_label">Nome: %1$s</string>
+    <string name="profile_email_label">Email: %1$s</string>
+    <string name="profile_id_label">UID: %1$s</string>
+    <string name="profile_provider_label">Fornitore: %1$s</string>
+    <string name="profile_account_created_label">Account creato: %1$s</string>
+    <string name="profile_last_access_label">Ultimo accesso: %1$s</string>
+    <string name="classes_synced_count_format">📘 Lezioni sincronizzate: %1$s</string>
+    <string name="tasks_synced_count_format">📝 Compiti sincronizzati: %1$s</string>
+    <string name="last_sync_datetime_format">⏱️ Ultima sincronizzazione: %1$s</string>
+    <string name="error_message_generic">Si è verificato un errore</string>
+    <string name="classes_synced_error_format">📘 Errore nell\'ottenere le lezioni: %1$s</string>
+    <string name="tasks_synced_error_format">📝 Errore nell\'ottenere i compiti: %1$s</string>
+    <string name="last_sync_error_format">⏱️ Errore nell\'ottenere la data: %1$s</string>
+    <string name="terms_conditions_title">📜 Termini e Condizioni</string>
+    <string name="terms_conditions_body">
+        📅 Benvenuto in KalendU\n\n
+        🔹 Uso Generale:\n
+        Questa applicazione è stata progettata per aiutarti a gestire il tuo tempo e le tue attività in modo efficiente.\n\n
+        🔹 Privacy:\n
+        Rispettiamo le tue informazioni personali. Utilizziamo i tuoi dati solo per migliorare la tua esperienza.\n\n
+        🔹 Responsabilità:\n
+        KalendU non è responsabile per la perdita di informazioni se elimini il tuo account o disinstalli l\'app.\n\n
+        🔹 Modifiche:\n
+        Potremmo aggiornare questi termini senza preavviso. Ti consigliamo di consultarli periodicamente.\n\n
+        💙 Grazie per aver usato KalendU
+    </string>
+
+    <string name="add_task">Aggiungi lezione/compito</string>
+    <string name="cancel">Annulla</string>
+    <string name="delete_account">Elimina account</string>
+    <string name="edit_profile">Modifica Profilo</string>
+    <string name="export_pdf">Esporta PDF</string>
+    <string name="login">Accedi</string>
+    <string name="logout">Esci</string>
+    <string name="select_image">Seleziona un\'immagine</string>
+    <string name="settings">Impostazioni</string>
+    <string name="today_is">Oggi è</string>
+    <string name="view_schedule">Visualizza orario</string>
+    <string name="view_tasks">Visualizza compiti</string>
+    <string name="what_do_you_want">Cosa vuoi fare?</string>
+    <string name="dark_mode">Modalità scura</string>
+    <string name="notifications">Notifiche</string>
+    <string name="save">Salva</string>
+    <string name="event_repetition_display">🔁 Ripetuto per %1$d settimane</string>
+    <string name="change_language">Cambia Lingua</string>
+    <string name="loading_event_data">Caricamento dati evento...</string>
+    <string name="error_deleting_events">Errore nell\'eliminazione degli eventi</string>
+    <string name="error_searching_events">Errore nella ricerca degli eventi</string>
+    <string name="event_icon_class">📘</string>
+    <string name="event_icon_task">📄</string>
+    <string name="event_type_class_display">Lezione</string>
+    <string name="event_type_task_display">Compito</string>
+    <string name="event_classroom_prefix">📍 Aula: %1$s</string>
+    <string name="event_no_classroom">Nessuna aula</string>
+    <string name="event_repetition_weeks_singular">🔁 Ripetuto %1$d settimana</string>
+    <string name="event_repetition_weeks_plural">🔁 Ripetuto %1$d settimane</string>
+    <string name="event_no_repetition">Nessuna ripetizione</string>
+    <string name="default_color_error">#CCCCCC</string>
+    <string name="dialog_delete_account_option">Elimina account</string>
+    <string name="toast_account_deleted">Account eliminato</string>
+    <string name="cd_profile_photo">Foto profilo utente</string>
+    <string name="toast_error_deleting_account">Errore nell\'eliminazione account: %s</string>
+    <string name="generic_error_message">Errore sconosciuto</string>
+    <string name="toast_reauth_flow_failed">Errore nell\'avvio del flusso di riautenticazione: %1$s</string>
+    <string name="error_start_time_after_end_time">L\ora di inizio non può essere successiva all\'ora di fine.</string>
+
+    <string name="activate_alarm_sound_switch">Attiva Suono Sveglia</string>
+    <string name="choose_sound_source_label">Scegli Origine Suono:</string>
+    <string name="radio_button_app_sound">Suono dell\'App</string>
+    <string name="radio_button_custom_sound">Suono Personalizzato (dal telefono)</string>
+    <string name="button_select_custom_sound">Seleziona Suono dal Telefono</string>
+    <string name="no_sound_selected_label">Nessun suono selezionato</string>
+    <string name="button_preview_sound">Anteprima Suono</string>
+    <string name="sound_selection_error">Errore nella selezione del suono.</string>
+    <string name="sound_preview_error">Errore nell\'anteprima del suono.</string>
+    <string name="sound_permission_denied">Permesso di lettura memoria negato. Impossibile selezionare suono personalizzato.</string>
+    <string name="sound_preview_stopped">Anteprima interrotta.</string>
+    <string name="sound_not_selected_toast">Per favore, seleziona prima un suono.</string>
+    <string name="alarm_sound_title">Suono Sveglia</string>
+    <string name="default_app_sound_name">Suono Predefinito</string>
+    <string name="error_copying_sound">Errore durante la copia del file audio.</string>
+    <string name="sound_selected_and_copied">Suono selezionato e copiato.</string>
+    <string name="activate_vibration_switch">📳 Attiva vibrazione</string>
+    <string name="button_test_vibration">Test Vibrazione</string>
+
+    <string name="sound_1_name">Suono 1</string>
+    <string name="sound_2_name">Suono 2</string>
+    <string name="sound_3_name">Suono 3</string>
+    <string name="sound_4_name">Suono 4</string>
+    <string name="sound_5_name">Suono 5</string>
+    <string name="sound_6_name">Suono 6</string>
+    <string name="sound_7_name">Suono 7</string>
+    <string name="sound_8_name">Suono 8</string>
+    <string name="sound_9_name">Suono 9</string>
+    <string name="sound_10_name">Suono 10</string>
+
+    <string name="vibration_pattern_none">Nessuna</string>
+    <string name="vibration_pattern_short">Corta</string>
+    <string name="vibration_pattern_long">Lunga</string>
+    <string name="vibration_pattern_double_short">Doppia Corta</string>
+    <string name="vibration_pattern_heartbeat">Battito Cardiaco</string>
+    <string name="vibration_disabled_toast">Vibrazione disattivata.</string>
+    <string name="device_no_vibration_support_toast">Il dispositivo non supporta la vibrazione.</string>
+    <string name="error_invalid_date_format">Formato data non valido.</string>
+    <string name="event_class_updated_successfully">✅ Classe aggiornata con successo</string>
+    <string name="error_updating_class_series">Errore durante l aggiornamento della serie di classi.</string>
+    <string name="hint_repetition_weeks">🔁 Numero di settimane di ripetizione</string>
+    <string name="enter_valid_repetition_weeks">Inserisci un numero valido di settimane di ripetizione (maggiore di 0).</string>
+    <string name="delete_class_options_title">Elimina classe ripetuta</string>
+    <string name="delete_class_options_message">Vuoi eliminare solo questa istanza della classe o tutte le classi ripetute?</string>
+    <string name="delete_this_class_only">Solo questa classe</string>
+    <string name="delete_all_repeated_classes">Tutte le classi ripetute</string>
+    <string name="error_deleting_repeated_classes">Errore durante l eliminazione delle classi ripetute</string>
+    <string name="error_loading_classes_to_delete">Errore durante il caricamento delle classi da eliminare</string>
+    <string name="event_task_saved_successfully2">✅ Attività aggiornata con successo</string>
+    <string name="delete_event_confirmation_message2">Sei sicuro di voler eliminare "%1$s"?</string>
+    <string name="delete_event">Elimina evento</string>
+    <string name="event_type_class_prefix">Lezione: %1$s</string>
+    <string name="event_type_task_prefix">Compito: %1$s</string>
+    <string name="time_range_format">🕒 %1$s - %2$s</string>
+    <string name="time_single_format">🕒 %1$s</string>
+    <string name="days_label_format">🗓️ Giorni: %1$s</string>
+    <string name="date_label_format">📅 Data: %1$s</string>
+    <string name="minutes_before_label_format">⏰ %1$d min prima</string>
+
+</resources>

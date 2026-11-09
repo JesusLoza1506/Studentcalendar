@@ -1,3 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="texto_principal">#FFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FFBB86FC</color> <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="texto_principal">#000000</color>
+    <color name="texto_principal2">#ECF0F1</color> <!-- texto blanco o gris muy claro -->
+    <color name="texto_secundario">#BDC3C7</color> <!-- texto gris claro -->
+    <color name="dark_screen_background">#1C2833</color>
+    <color name="dark_card_background_primary">#2C3E50</color>
+    <color name="dark_card_background_secondary">#2C3E50</color>
+    <color name="dark_input_field_background">#34495E</color>
+    <color name="dark_text_primary">#ECF0F1</color>        <color name="dark_text_secondary">#BDC3C7</color>       <color name="dark_text_empty_state">#AAAAAA</color>    <color name="dark_text_week_navigation">#FFFFFF</color> <color name="dark_text_time_range">#FFFFFF</color>      <color name="dark_text_checkbox">#FFFFFF</color>        <color name="dark_button_text_on_dark_background">#FFFFFF</color> <color name="dark_edit_text_background_tint">#616161</color> <color name="dark_radio_button_class_tint">#81C784</color> <color name="dark_radio_button_task_tint">#64B5F6</color>  <color name="dark_switch_thumb_tint">#64B5F6</color>   <color name="dark_switch_track_tint">#2980B9</color>   <color name="dark_spinner_background_tint">#616161</color> <color name="dark_spinner_popup_background">#2C3E50</color> <color name="dark_button_primary_background">#2ECC71</color>   <color name="dark_button_primary_stroke">#FFFFFF</color>       <color name="dark_button_secondary_background">#2980B9</color> <color name="dark_button_secondary_stroke">#FFFFFF</color>     <color name="dark_button_destructive_background">#C0392B</color> <color name="dark_button_destructive_stroke">#FFFFFF</color>   <color name="dark_button_share_background">#FB8C00</color>    <color name="dark_button_share_stroke">#FFFFFF</color>        <color name="dark_settings_button_background">#34495E</color> <color name="dark_settings_button_text">#FFFFFF</color>       <color name="dark_settings_button_stroke">#FFFFFF</color>     <color name="dark_searchview_background">#2C3E50</color>       <color name="dark_searchview_hint_text">#AAAAAA</color>        <color name="dark_searchview_icon_tint">#ECF0F1</color>        <color name="dark_searchview_text">#ECF0F1</color>             <color name="dark_checkbox_tint">#3498DB</color>        <color name="dark_next_class_title">#64B5F6</color>     <color name="dark_profile_image_tint">#ECF0F1</color>   <color name="dark_preview_image_tint">#BDC3C7</color>   <color name="dark_red_500">#E57373</color>
+    <color name="dark_yellow_500">#FFF176</color>
+    <color name="dark_purple_color_500">#BA68C8</color>
+    <color name="dark_grey_500">#B0BEC5</color>
+    <!-- Colores para la vista de Datos Sincronizados (Modo Oscuro) -->
+    <color name="dark_sync_profile_text">#A9CCE3</color>   <!-- Azul claro para Perfil -->
+    <color name="dark_sync_classes_text">#82E0AA</color>   <!-- Verde claro para Clases -->
+    <color name="dark_sync_tasks_text">#F9E79F</color>     <!-- Amarillo muy claro para Tareas -->
+    <color name="dark_sync_last_sync_text">#85C1E9</color> <!-- Azul más claro para Última Sincronización -->
+
+    <!-- Colores para la vista de Términos y Condiciones (Modo Oscuro) -->
+    <color name="dark_terms_body_text">#D0D3D4</color>     <!-- Gris muy claro para el cuerpo del texto -->
+
 </resources>

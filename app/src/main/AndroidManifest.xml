@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.studentcalendar">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permiso para conexión a Internet -->
+    <!-- Permisos de la aplicación (sin duplicados) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <!-- Permisos para alarmas y notificaciones -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- USE_FULL_SCREEN_INTENT es para notificaciones de alta prioridad que pueden mostrar una UI de pantalla completa -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <!-- Permiso para Foreground Services (necesario para API 28+) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Permisos para acceso a almacenamiento externo/medios para sonidos personalizados -->
+    <!-- Para Android 12 (API 32) y versiones anteriores -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <!-- Para Android 13 (API 33) y versiones posteriores -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+
+    <!-- Permiso para acceder a Internet (ya lo tenías) -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
 
     <application
+        android:name=".KalendUApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,12 +40,45 @@
         android:label="KalendU"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Studentcalendar"
+        android:theme="@style/Theme.StudentCalendar.NoActionBar"
         tools:targetApi="31">
 
-        <!-- SplashActivity como pantalla de inicio -->
+        <!-- Actividades -->
+        <activity android:name=".vertareas.EditarEventoActivity" android:exported="false" />
+        <activity android:name=".notificaciones.NotificacionesActivity" android:exported="false" />
+        <activity android:name=".ajustes.DatosSincronizadosActivity" android:exported="false" />
+        <activity android:name=".ajustes.TerminosCondicionesActivity" android:exported="false" />
+        <activity android:name=".ajustes.AjustesActivity" android:exported="false" />
+        <activity android:name=".inicio.LoginActivity" android:exported="false" />
+        <activity android:name=".inicio.MainActivity" android:exported="false" />
+        <activity android:name=".ExportarHorarioPdfActivity" android:exported="false" />
+        <activity android:name=".vertareas.VerTareasActivity" android:exported="false" />
+        <activity android:name=".horariosemanal.HorarioSemanalActivity" android:exported="false" />
+        <activity android:name=".AnadirClaseTareaActivity" android:exported="false" />
+
+        <receiver android:name=".notificaciones.NotificationReceiver" android:exported="false" />
+        <receiver android:name=".notificaciones.RestoreRemindersReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- FileProvider para compartir archivos PDF -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.studentcalendar.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- SplashActivity con intent-filter para iniciar la app -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".inicio.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,33 +86,13 @@
             </intent-filter>
         </activity>
 
-        <!-- Otras actividades -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
+        <service
+            android:name=".notificaciones.AlarmService"
+            android:foregroundServiceType="mediaPlayback"
+            android:enabled="true"
+            android:exported="false" />
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".AjustesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ExportarHorarioPdfActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NotificacionesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".VerTareasActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HorarioSemanalActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AnadirClaseTareaActivity"
-            android:exported="false" />
 
     </application>
+
 </manifest>

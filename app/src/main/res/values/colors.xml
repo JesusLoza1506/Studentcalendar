@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FEFEFF</color>
+    <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="texto_principal">#FFFFFF</color>
-
+    <color name="texto_principal">#040404</color>
+    <color name="texto_principal2">#1C1C1C</color> <!-- texto negro o gris oscuro -->
+    <color name="texto_secundario">#808080</color>
+    <color name="light_screen_background">#F0F2F5</color>
+    <color name="light_card_background_primary">#FFFFFF</color>
+    <color name="light_card_background_secondary">#F8F8F8</color>
+    <color name="light_input_field_background">#E0E0E0</color>
+    <color name="light_text_primary">#212121</color>        <color name="light_text_secondary">#616161</color>       <color name="light_text_empty_state">#9E9E9E</color>    <color name="light_text_week_navigation">#212121</color> <color name="light_text_time_range">#212121</color>      <color name="light_text_checkbox">#212121</color>        <color name="light_button_text_on_dark_background">#FFFFFF</color> <color name="light_edit_text_background_tint">#BDBDBD</color> <color name="light_radio_button_class_tint">#4CAF50</color> <color name="light_radio_button_task_tint">#2196F3</color>  <color name="light_switch_thumb_tint">#2196F3</color>   <color name="light_switch_track_tint">#BBDEFB</color>   <color name="light_spinner_background_tint">#BDBDBD</color> <color name="light_spinner_popup_background">#FFFFFF</color> <color name="light_button_primary_background">#4CAF50</color>   <color name="light_button_primary_stroke">#FFFFFF</color>       <color name="light_button_secondary_background">#2196F3</color> <color name="light_button_secondary_stroke">#FFFFFF</color>     <color name="light_button_destructive_background">#EF5350</color> <color name="light_button_destructive_stroke">#FFFFFF</color>   <color name="light_button_share_background">#FF9800</color>    <color name="light_button_share_stroke">#FFFFFF</color>        <color name="light_settings_button_background">#F8F8F8</color> <color name="light_settings_button_text">#212121</color>       <color name="light_settings_button_stroke">#BDBDBD</color>     <color name="light_searchview_background">#F8F8F8</color>       <color name="light_searchview_hint_text">#9E9E9E</color>        <color name="light_searchview_icon_tint">#616161</color>        <color name="light_searchview_text">#212121</color>             <color name="light_checkbox_tint">#2196F3</color>       <color name="light_next_class_title">#2196F3</color>    <color name="light_profile_image_tint">#9E9E9E</color>  <color name="light_preview_image_tint">#9E9E9E</color>  <color name="red_500">#F44336</color>
+    <color name="yellow_500">#FFEB3B</color>
+    <color name="purple_color_500">#9C27B0</color>
+    <color name="grey_500">#9E9E9E</color>
+    <!-- Colores para la vista de Datos Sincronizados (Modo Claro) -->
+    <color name="light_sync_profile_text">#2196F3</color>   <!-- Azul para Perfil -->
+    <color name="light_sync_classes_text">#4CAF50</color>   <!-- Verde para Clases -->
+    <color name="light_sync_tasks_text">#FFC107</color>     <!-- Amarillo/Naranja para Tareas -->
+    <color name="light_sync_last_sync_text">#03A9F4</color> <!-- Azul claro para Última Sincronización -->
+    <color name="red">#F44336</color>
+    <!-- Colores para la vista de Términos y Condiciones (Modo Claro) -->
+    <color name="light_terms_body_text">#424242</color>     <!-- Gris oscuro para el cuerpo del texto -->
+        <color name="gris_oscuro_deseleccionado">#757575</color> <color name="verde_oscuro_seleccionado">#4CAF50</color>
 </resources>

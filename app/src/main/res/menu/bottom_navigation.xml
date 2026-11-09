@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/homr"
+        android:title="@string/nav_home" />
+
+    <item
+    android:id="@+id/nav_view_schedule"
+    android:icon="@drawable/calendar"
+    android:title="@string/btn_ver_horario" />
+
+    <item
+        android:id="@+id/nav_view_tasks"
+        android:icon="@drawable/edit"
+        android:title="@string/btn_ver_tareas" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/notification"
+        android:title="@string/btn_notificaciones" />
+
+    <item
+        android:id="@+id/nav_export_pdf"
+        android:icon="@drawable/arrow"
+        android:title="@string/btn_exportar_pdf" />
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Estilo para el SearchView personalizado -->
+    <style name="AppSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Color del texto de la pista (hint) -->
+        <item name="android:textColorHint">?attr/searchViewHintColor</item>
+        <!-- Color del texto de la consulta (query) -->
+        <item name="android:textColor">?attr/searchViewTextColor</item>
+        <!-- Tinte de los iconos (lupa, cerrar). Generalmente se maneja por el tema padre (DayNight)
+             a través de colorControlNormal, pero si no, podrías necesitar drawables personalizados. -->
+        <!-- <item name="searchIcon">@drawable/ic_search_themed</item> -->
+        <!-- <item name="closeIcon">@drawable/ic_close_themed</item> -->
+    </style>
+</resources>

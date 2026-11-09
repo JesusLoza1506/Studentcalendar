@@ -1,0 +1,15 @@
+<resources>
+    <string name="invalid_series">Use 1 to %1$d weeks, select days, and check that there are future classes.</string>
+    <string name="invalid_future_event">Enter a name and a valid future date and time.</string>
+    <string name="reminder_time_passed">The selected reminder time has passed. Choose less advance notice.</string>
+    <string name="delete_data_wrong_account">Confirm with the same Google account to delete its schedule.</string>
+    <string name="delete_data_retry">Deletion is incomplete. Check your connection and try again.</string>
+    <string name="last_cloud_check">Server checked: %1$s</string>
+    <string name="pdf_invalid_filter">Select at least one day and an end time after the start time.</string>
+    <string name="pdf_saved">PDF saved.</string>
+    <string name="login_subtitle">Your academic schedule, always at hand</string>
+    <string name="login_google">Sign in with Google</string>
+    <string name="no_connection_delete_event">Connect to the internet to delete the event.</string>
+    <string name="no_events_matching_search">No events match your search.</string>
+    <string name="error_updating_events_offline">Could not update inactive events. Try again when connected.</string>
+</resources>

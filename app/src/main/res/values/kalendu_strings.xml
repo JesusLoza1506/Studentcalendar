@@ -1,0 +1,13 @@
+<resources>
+    <string name="invalid_series">Usa entre 1 y %1$d semanas, selecciona días y comprueba que haya clases futuras.</string>
+    <string name="invalid_future_event">Introduce un nombre y una fecha y hora futuras válidas.</string>
+    <string name="reminder_time_passed">La hora elegida para el aviso ya pasó. Reduce la antelación.</string>
+    <string name="delete_data_wrong_account">Confirma con la misma cuenta de Google para borrar su agenda.</string>
+    <string name="delete_data_retry">El borrado quedó incompleto. Comprueba la conexión e inténtalo nuevamente.</string>
+    <string name="last_cloud_check">Consulta al servidor: %1$s</string>
+    <string name="pdf_invalid_filter">Selecciona al menos un día y una hora de fin posterior a la de inicio.</string>
+    <string name="pdf_saved">PDF guardado.</string>
+    <string name="login_subtitle">Tu agenda universitaria, siempre a mano</string>
+    <string name="login_google">Iniciar sesión con Google</string>
+    <string name="home_brand" translatable="false">KalendU</string>
+</resources>

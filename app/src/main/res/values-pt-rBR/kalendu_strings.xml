@@ -1,0 +1,15 @@
+<resources>
+    <string name="invalid_series">Use de 1 a %1$d semanas e selecione dias com aulas futuras.</string>
+    <string name="invalid_future_event">Informe um nome, uma data e um horário futuro válidos.</string>
+    <string name="reminder_time_passed">O horário do lembrete passou. Reduza a antecedência.</string>
+    <string name="delete_data_wrong_account">Confirme com a mesma conta Google para excluir sua agenda.</string>
+    <string name="delete_data_retry">A exclusão ficou incompleta. Verifique a conexão e tente novamente.</string>
+    <string name="last_cloud_check">Servidor consultado: %1$s</string>
+    <string name="pdf_invalid_filter">Selecione pelo menos um dia e um horário de término após o início.</string>
+    <string name="pdf_saved">PDF salvo.</string>
+    <string name="login_subtitle">Sua agenda universitária sempre à mão</string>
+    <string name="login_google">Entrar com o Google</string>
+    <string name="no_connection_delete_event">Conecte-se à Internet para excluir o evento.</string>
+    <string name="no_events_matching_search">Nenhum evento corresponde à pesquisa.</string>
+    <string name="error_updating_events_offline">Não foi possível atualizar os eventos inativos. Tente novamente quando estiver conectado.</string>
+</resources>

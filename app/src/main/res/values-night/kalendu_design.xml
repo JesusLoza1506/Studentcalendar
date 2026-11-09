@@ -1,0 +1,12 @@
+<resources>
+    <color name="kalendu_primary">#B7C0FF</color>
+    <color name="kalendu_on_primary">#182455</color>
+    <color name="kalendu_accent">#85DFD2</color>
+    <color name="kalendu_background">#10182A</color>
+    <color name="kalendu_surface">#1B2740</color>
+    <color name="kalendu_feature">#25365D</color>
+    <color name="kalendu_text">#F1F4FF</color>
+    <color name="kalendu_muted">#BAC6DE</color>
+    <color name="kalendu_outline">#4C5D7C</color>
+    <color name="kalendu_danger">#FFABB9</color>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <!-- Tamaño para los cuadros de color -->
+    <dimen name="color_box_size">40dp</dimen>
+    <dimen name="color_box_margin">8dp</dimen>
+</resources>

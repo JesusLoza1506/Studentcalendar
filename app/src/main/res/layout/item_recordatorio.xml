@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="@dimen/kalendu_card_radius"
+    app:cardElevation="@dimen/kalendu_card_elevation"
+    app:cardBackgroundColor="?attr/cardBackgroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Icono de campana para recordatorio -->
+        <TextView
+            android:id="@+id/tvReminderIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔔"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <!-- Título del recordatorio (Nombre del evento) -->
+        <TextView
+            android:id="@+id/tvReminderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Clase: Prueba 1"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvReminderIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvReminderIcon"
+            app:layout_constraintBottom_toBottomOf="@id/tvReminderIcon" />
+
+        <!-- Detalles del evento (Hora, Días, Fecha, Minutos antes) -->
+        <LinearLayout
+            android:id="@+id/llEventDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvReminderIcon">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🕒 21:18 - 23:30"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="15sp"
+                android:drawablePadding="8dp" />
+
+            <TextView
+                android:id="@+id/tvDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗓️ Días: Sábado"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp"
+                android:drawablePadding="8dp" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 Fecha: 05/07/2025"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp"
+                android:drawablePadding="8dp" />
+
+            <TextView
+                android:id="@+id/tvMinutesBefore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏰ 5 min antes"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp"
+                android:drawablePadding="8dp" />
+        </LinearLayout>
+
+        <!-- Contenedor de botones -->
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            app:layout_constraintTop_toBottomOf="@id/llEventDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnModify"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_modify_reminder"
+                android:textColor="?attr/colorPrimary"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginEnd="8dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:cornerRadius="@dimen/kalendu_control_radius"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_delete_reminder"
+                android:textColor="?attr/colorPrimary"
+                android:backgroundTint="@android:color/transparent"
+                app:strokeColor="?attr/colorPrimary"
+                app:cornerRadius="@dimen/kalendu_control_radius"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="@dimen/kalendu_card_radius"
+    app:cardElevation="@dimen/kalendu_card_elevation"
+    app:cardBackgroundColor="@color/kalendu_surface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <!-- Ícono tipo evento -->
+        <TextView
+            android:id="@+id/tvIconoTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📘"
+            android:textSize="26sp"
+            android:textColor="@color/kalendu_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <!-- Barra de color -->
+        <View
+            android:id="@+id/viewColor"
+            android:layout_width="6dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#2196F3"
+            app:layout_constraintStart_toEndOf="@id/tvIconoTipo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Contenido -->
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@id/viewColor"
+            app:layout_constraintEnd_toStartOf="@id/tvDeleteIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <!-- Nombre del evento -->
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del evento"
+                android:textColor="@color/kalendu_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Tipo y fecha -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTipoEvento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clase"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:background="@drawable/bg_tipo_evento"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="10/07/2025"
+                    android:textColor="@color/kalendu_muted"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Hora -->
+            <TextView
+                android:id="@+id/tvHora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="08:00 - 10:00"
+                android:textColor="@color/kalendu_muted"
+                android:textSize="14sp" />
+
+            <!-- Aula -->
+            <TextView
+                android:id="@+id/tvAula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="📍 Aula 101"
+                android:textColor="@color/kalendu_muted"
+                android:textSize="13sp" />
+
+            <!-- Repetición -->
+            <TextView
+                android:id="@+id/tvRepeticion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="🔁 Repetido 3 semanas"
+                android:textColor="@color/kalendu_muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Ícono de eliminar -->
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvDeleteIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗑️"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
