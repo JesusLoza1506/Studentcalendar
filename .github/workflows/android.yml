@@ -25,10 +25,14 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - name: Preparar Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          cmdline-tools-version: '11076708'
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
       - uses: gradle/actions/setup-gradle@v6
       - name: Configuración Android y Firebase de pruebas
         run: |
-          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
           python3 scripts/ci-firebase.py
       - name: Verificar el proyecto
         run: bash ./gradlew --stacktrace :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleDebugAndroidTest
@@ -59,6 +63,11 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - name: Preparar Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          cmdline-tools-version: '11076708'
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
       - uses: gradle/actions/setup-gradle@v6
       - name: Habilitar acceso a KVM
         run: |
@@ -67,7 +76,6 @@ jobs:
           sudo udevadm trigger --name-match=kvm
       - name: Preparar configuración local
         run: |
-          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
           python3 scripts/ci-firebase.py
       - name: Ejecutar pruebas de pantallas y recordatorios
         uses: reactivecircus/android-emulator-runner@v2
@@ -102,6 +110,11 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - name: Preparar Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          cmdline-tools-version: '11076708'
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
       - uses: gradle/actions/setup-gradle@v6
       - name: Validar etiqueta y preparar firma
         env:
@@ -116,7 +129,6 @@ jobs:
             echo "::error::Configura Firebase y la clave de firma en el entorno release."
             exit 1
           }
-          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
           mkdir -p app/src/release
           printf '%s' "$GOOGLE_SERVICES_JSON" > app/src/release/google-services.json
           printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/kalendu-release.jks"
