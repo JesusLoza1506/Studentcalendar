@@ -1,0 +1,15 @@
+<resources>
+    <string name="invalid_series">Usa da 1 a %1$d settimane e seleziona giorni con lezioni future.</string>
+    <string name="invalid_future_event">Inserisci un nome, una data e un orario futuro validi.</string>
+    <string name="reminder_time_passed">L’orario del promemoria è passato. Riduci l’anticipo.</string>
+    <string name="delete_data_wrong_account">Conferma con lo stesso account Google per cancellare la sua agenda.</string>
+    <string name="delete_data_retry">Eliminazione incompleta. Controlla la connessione e riprova.</string>
+    <string name="last_cloud_check">Server consultato: %1$s</string>
+    <string name="pdf_invalid_filter">Seleziona almeno un giorno e un orario di fine successivo all’inizio.</string>
+    <string name="pdf_saved">PDF salvato.</string>
+    <string name="login_subtitle">La tua agenda universitaria a portata di mano</string>
+    <string name="login_google">Accedi con Google</string>
+    <string name="no_connection_delete_event">Connettiti a Internet per eliminare l’evento.</string>
+    <string name="no_events_matching_search">Nessun evento corrisponde alla ricerca.</string>
+    <string name="error_updating_events_offline">Impossibile aggiornare gli eventi inattivi. Riprova quando sei online.</string>
+</resources>

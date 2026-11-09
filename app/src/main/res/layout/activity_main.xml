@@ -1,231 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1C2833"
-    android:fillViewport="true"
-    android:padding="24dp">
+    android:background="?attr/screenBackgroundColor">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <ScrollView
+        android:id="@+id/mainContentScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:padding="@dimen/kalendu_card_padding"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardWelcome"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="35dp"
-            app:cardBackgroundColor="#2C3E50"
-            app:cardCornerRadius="30dp"
-            app:cardElevation="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="30dp">
+                android:text="@string/home_brand"
+                android:textColor="@color/kalendu_primary"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imgSettings"
+                app:layout_constraintBottom_toBottomOf="@id/imgSettings" />
 
-                <ImageView
-                    android:id="@+id/imgProfile"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="@drawable/circle_background"
-                    android:contentDescription="Imagen de perfil del usuario"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/user" />
+            <ImageView
+                android:id="@+id/imgSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/btn_configuracion"
+                android:focusable="true"
+                android:src="@drawable/kalendu_settings"
+                android:padding="12dp"
+                app:tint="@color/kalendu_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
 
-                <TextView
-                    android:id="@+id/tvUserName"
-                    android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardWelcome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="0dp"
+                app:cardBackgroundColor="?attr/cardBackgroundColor"
+                app:cardCornerRadius="@dimen/kalendu_card_radius"
+                app:cardElevation="@dimen/kalendu_card_elevation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgSettings">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="👋 Hola, Usuario"
-                    android:textColor="#ECF0F1"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/kalendu_card_padding">
 
-                <TextView
-                    android:id="@+id/tvTodayDate"
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/circle_background"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user" />
+
+                    <TextView android:textAppearance="@style/TextAppearance.KalendU.ScreenTitle"
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hola_usuario" />
+
+                    <TextView
+                        android:id="@+id/tvTodayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/hoy_es"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNextClass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="?attr/cardSecondaryBackgroundColor"
+                app:cardCornerRadius="@dimen/kalendu_card_radius"
+                app:cardElevation="@dimen/kalendu_card_elevation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardWelcome">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="🗓️ Hoy es: Jueves 12 de Junio"
-                    android:textColor="#BDC3C7"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:orientation="vertical"
+                    android:padding="@dimen/kalendu_card_padding">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardNextClass"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardBackgroundColor="#34495E"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardWelcome">
+                    <TextView
+                        android:id="@+id/tvNextClassTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/alerta_evento"
+                        android:textColor="?attr/nextClassTitleColor"
+                        android:textSize="17sp"
+                        android:textStyle="normal" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/tvNextClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvNextClassRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton android:textAllCaps="false"
+                android:id="@+id/btnAddTask"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="25dp">
-
-                <TextView
-                    android:id="@+id/tvNextClassTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp"
-                    android:text="📡 Alerta de Evento Próximo:"
-                    android:textColor="#AED6F1"
-                    android:textSize="17sp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/tvNextClass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="🌐 Conferencia IA - Módulo Gamma"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvNextClassRoom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="⏰ Sala de Proyección Omicron – 09:00 Horas"
-                    android:textColor="#BDC3C7"
-                    android:textSize="17sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAddTask"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:backgroundTint="#2ECC71"
-            android:paddingVertical="14dp"
-            android:text="➕ Programar Nueva Actividad"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:cornerRadius="28dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardNextClass"
-            app:strokeColor="#FFFFFF"
-            app:strokeWidth="3dp" />
-
-        <LinearLayout
-            android:id="@+id/menuLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingTop="40dp"
-            android:paddingBottom="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnAddTask">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnViewSchedule"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#2980B9"
-                android:paddingVertical="10dp"
-                android:text="📊 Ver Horario"
-                android:textColor="#FBFBFB"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="?attr/buttonPrimaryBackgroundColor"
+                android:paddingVertical="14dp"
+                android:text="@string/btn_nueva_actividad"
+                android:textColor="?attr/buttonPrimaryTextColor"
                 android:textSize="15sp"
-                app:cornerRadius="18dp"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="3dp" />
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/kalendu_control_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardNextClass"
+                app:strokeColor="?attr/buttonPrimaryStrokeColor"
+                app:strokeWidth="1dp" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnViewTasks"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#2980B9"
-                android:paddingVertical="10dp"
-                android:text="⚙️ Gestión de Tareas Pendientes"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:cornerRadius="18dp"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="3dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnNotifications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#2980B9"
-                android:paddingVertical="10dp"
-                android:text="🚨 Notificaciones del Sistema"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:cornerRadius="18dp"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="3dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_navigation"
+        android:background="?attr/cardBackgroundColor"
+        app:labelVisibilityMode="labeled"
+        style="@style/Widget.App.BottomNavigationView"
+        app:itemIconTint="@color/bottom_nav_item_icon_color"
+        app:itemTextColor="@color/bottom_nav_item_text_color"
+        />
 
-                />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnExportPDF"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#2980B9"
-                android:paddingVertical="10dp"
-                android:text="🖨️ Exportar Calendario [PDF]"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:cornerRadius="18dp"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="3dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnSettings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#2980B9"
-                android:paddingVertical="10dp"
-                android:text="🛠️ Configuración"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:cornerRadius="18dp"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="3dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLogout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#C0392B"
-                android:paddingVertical="10dp"
-                android:text="🔒 Cerrar Sesión"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:cornerRadius="18dp"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="3dp" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

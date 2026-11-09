@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Studentcalendar"
 include(":app")
- 

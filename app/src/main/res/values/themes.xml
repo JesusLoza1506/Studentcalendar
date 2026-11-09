@@ -1,16 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.Studentcalendar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="21">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    <style name="Theme.StudentCalendar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/kalendu_primary</item>
+        <item name="colorPrimaryVariant">@color/kalendu_primary</item>
+        <item name="colorOnPrimary">@color/kalendu_on_primary</item>
+        <item name="colorSecondary">@color/kalendu_accent</item>
+        <item name="colorSecondaryVariant">@color/kalendu_accent</item>
+        <item name="colorOnSecondary">@color/kalendu_background</item>
+        <item name="colorSurface">@color/kalendu_surface</item>
+        <item name="colorOnSurface">@color/kalendu_text</item>
+        <item name="android:colorBackground">@color/kalendu_background</item>
+        <item name="android:navigationBarColor">@color/kalendu_background</item>
+        <item name="materialButtonStyle">@style/Widget.KalendU.Button</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.KalendU.Alert</item>
+        <item name="inputFieldBackgroundColor">@color/kalendu_feature</item>
+
+        <!-- MODIFICACIÓN AQUÍ PARA MODO CLARO -->
+        <item name="android:statusBarColor">@color/kalendu_background</item>
+        <item name="android:windowLightStatusBar">true</item> <!-- Iconos oscuros para fondo claro -->
+        <!-- FIN MODIFICACIÓN -->
+
+        <item name="android:windowBackground">?attr/screenBackgroundColor</item>
+        <item name="screenBackgroundColor">@color/kalendu_background</item>
+
+        <item name="android:textColorPrimary">@color/kalendu_text</item>
+        <item name="android:textColorSecondary">@color/kalendu_muted</item>
+        <item name="emptyStateTextColor">@color/kalendu_muted</item>
+        <item name="weekNavigationButtonColor">@color/kalendu_primary</item>
+        <item name="selectedWeekTextColor">@color/kalendu_text</item>
+        <item name="timeRangeTextColor">@color/kalendu_muted</item>
+        <item name="checkBoxTextColor">@color/kalendu_text</item>
+        <item name="nextClassTitleColor">@color/kalendu_primary</item>
+
+        <item name="cardBackgroundColor">@color/kalendu_surface</item>
+        <item name="cardSecondaryBackgroundColor">@color/kalendu_feature</item>
+
+        <item name="editTextBackgroundTint">@color/kalendu_outline</item>
+
+        <item name="radioButtonClassTint">@color/kalendu_primary</item>
+        <item name="radioButtonTaskTint">@color/kalendu_accent</item>
+
+        <item name="switchThumbTint">@color/kalendu_primary</item>
+        <item name="switchTrackTint">@color/kalendu_outline</item>
+
+        <item name="spinnerBackgroundTint">@color/kalendu_primary</item>
+        <item name="spinnerPopupBackground">@color/kalendu_surface</item>
+
+        <item name="buttonPrimaryBackgroundColor">@color/kalendu_primary</item>
+        <item name="buttonPrimaryTextColor">@color/kalendu_on_primary</item>
+        <item name="buttonPrimaryStrokeColor">@color/kalendu_primary</item>
+
+        <item name="buttonSecondaryBackgroundColor">@color/kalendu_feature</item>
+        <item name="buttonSecondaryTextColor">@color/kalendu_primary</item>
+        <item name="buttonSecondaryStrokeColor">@color/kalendu_outline</item>
+
+        <item name="buttonDestructiveBackgroundColor">@color/kalendu_surface</item>
+        <item name="buttonDestructiveTextColor">@color/kalendu_danger</item>
+        <item name="buttonDestructiveStrokeColor">@color/kalendu_danger</item>
+
+        <item name="buttonShareBackgroundColor">@color/kalendu_feature</item>
+        <item name="buttonShareTextColor">@color/kalendu_primary</item>
+        <item name="buttonShareStrokeColor">@color/kalendu_outline</item>
+
+        <item name="settingsButtonBackgroundColor">@color/kalendu_surface</item>
+        <item name="settingsButtonTextColor">@color/kalendu_text</item>
+        <item name="settingsButtonStrokeColor">@color/kalendu_outline</item>
+
+        <item name="searchViewBackground">@color/kalendu_surface</item>
+        <item name="searchViewHintColor">@color/kalendu_muted</item>
+        <item name="searchViewTextColor">@color/kalendu_text</item>
+        <item name="searchViewIconTint">@color/kalendu_muted</item>
+
+        <item name="checkBoxDaysTint">@color/kalendu_primary</item>
+        <item name="profileImageTint">@color/kalendu_feature</item>
+        <item name="previewImageTint">@color/kalendu_feature</item>
+        <item name="syncProfileTextColor">@color/kalendu_text</item>
+        <item name="syncClassesTextColor">@color/kalendu_text</item>
+        <item name="syncTasksTextColor">@color/kalendu_text</item>
+        <item name="syncLastSyncTextColor">@color/kalendu_muted</item>
+
+        <!-- Atributos para la vista de Términos y Condiciones -->
+        <item name="termsBodyTextColor">@color/kalendu_muted</item>
+
+    </style>
+
+    <style name="Theme.StudentCalendar.NoActionBar" parent="Theme.StudentCalendar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">20dp</item>
+        <item name="itemPaddingTop">6dp</item>
+        <item name="itemPaddingBottom">8dp</item>
     </style>
 </resources>

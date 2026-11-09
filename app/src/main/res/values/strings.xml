@@ -1,4 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Studentcalendar</string>
-    <string name="default_web_client_id">815176390194-1l90v13coliamrjkgnf9fpon0huq4lvt.apps.googleusercontent.com</string>
+    <string name="app_name">KalendU</string>
+
+    <!-- 🌟 MainActivity -->
+        <string name="usuario">Usuario</string>
+        <string name="hola_usuario">👋 Hola, %1$s</string>
+        <string name="hoy_es">📅 Hoy es: %1$s</string>
+        <string name="alerta_evento">📡 Alerta de Evento Próximo:</string>
+        <string name="proximo_evento">Próximo evento</string>
+
+        <string name="sin_eventos">No hay eventos próximos</string>
+        <string name="btn_nueva_actividad">➕ Programar Nueva Actividad</string>
+        <string name="nav_home">Menú</string>
+        <string name="btn_ver_horario"> Ver Horario</string>
+        <string name="btn_ver_tareas">Editar</string>
+        <string name="btn_notificaciones">Mis Alertas</string>
+        <string name="btn_exportar_pdf">Exportar</string>
+        <string name="btn_configuracion">🛠️ Configuración</string>
+        <string name="next_class">Próxima clase</string>
+        <string name="img_perfil_desc">Imagen de perfil del usuario</string>
+        <string name="default_username_display">👤 Tu nombre</string>
+        <string name="content_description_user_photo">Foto de perfil</string>
+        <string name="toast_user_not_logged_in_error">El usuario no ha iniciado sesión.</string>
+
+    <!-- 📅 AnadirClaseTareaActivity -->
+    <string name="add_event_title">📅 Añadir Evento</string>
+    <string name="hint_event_name">Nombre del evento</string>
+    <string name="hint_classroom">Aula</string>
+    <string name="hint_classroom_optional">Aula (opcional)</string>
+    <string name="label_event_type">Tipo:</string>
+    <string name="radio_button_class">Clase</string>
+    <string name="radio_button_task">Tarea</string>
+    <string name="label_days_for_classes">Días (para clases):</string>
+    <string name="day_monday_short">L</string>
+    <string name="day_tuesday_short">M</string>
+    <string name="day_wednesday_short">X</string>
+    <string name="day_thursday_short">J</string>
+    <string name="day_friday_short">V</string>
+    <string name="day_saturday_short">S</string>
+    <string name="day_sunday_short">D</string>
+    <string name="label_repeat_by">Repetir por:</string>
+    <string name="hint_repeat_weeks_default">-</string>
+    <string name="label_weeks">semanas</string>
+    <string name="start_repetition_date_button">📅 Iniciar Repetición Desde</string>
+    <string name="start_repetition_prefix">Desde:</string>
+    <string name="start_time_button">Hora Inicio</string>
+    <string name="end_time_button">Hora Fin</string>
+    <string name="start_time_prefix">Inicio:</string>
+    <string name="end_time_prefix">Fin:</string>
+    <string name="select_date_button">📅 Seleccionar Fecha</string>
+    <string name="date_prefix">Fecha:</string>
+    <string name="activate_reminder_switch">🔔 Activar recordatorio</string>
+    <string name="color_button">🎨 Color</string>
+    <string name="select_color_title">Selecciona un color</string>
+    <string name="save_event_button">✅ GUARDAR EVENTO</string>
+    <string name="notifications_enabled">Recordatorio activado</string>
+    <string name="notifications_disabled">Recordatorio desactivado</string>
+    <string name="toast_permission_granted_reminders_enabled">Permiso concedido, recordatorio activado</string>
+    <string name="toast_permission_denied_reminders_disabled">Permiso denegado, recordatorio desactivado</string>
+    <string name="toast_enable_exact_alarms_permission">Activa el permiso de alarmas exactas en ajustes</string>
+    <string-array name="reminder_options">
+        <item>5 minutos antes</item>
+        <item>10 minutos antes</item>
+        <item>15 minutos antes</item>
+        <item>30 minutos antes</item>
+        <item>60 minutos antes</item>
+    </string-array>
+    <string name="reminder_5_minutes_option">5 minutos antes</string>
+    <string name="reminder_10_minutes_option">10 minutos antes</string>
+    <string name="reminder_15_minutes_option">15 minutos antes</string>
+    <string name="reminder_30_minutes_option">30 minutos antes</string>
+    <string name="reminder_60_minutes_option">60 minutos antes</string>
+    <string name="notification_x_minutes_before">Se notificará %1$d min antes</string>
+    <string name="toast_complete_required_fields">Completa todos los campos obligatorios</string>
+    <string name="toast_select_color">Selecciona un color</string>
+    <string name="toast_select_start_time">Selecciona hora de inicio</string>
+    <string name="toast_select_end_time">Selecciona hora de fin</string>
+    <string name="toast_select_days_for_class">Selecciona al menos un día</string>
+    <string name="toast_select_repetition_start_date">Selecciona fecha de inicio</string>
+    <string name="toast_start_time_after_end_time">La hora de inicio no puede ser mayor o igual a la de fin</string>
+    <string name="toast_select_task_date">Selecciona una fecha para la tarea</string>
+    <string name="toast_task_date_in_past">La fecha seleccionada ya pasó</string>
+    <string name="toast_user_not_logged_in">Usuario no autenticado</string>
+    <string name="toast_classes_saved">✅ Clase guardada correctamente</string>
+    <string name="toast_task_saved">✅ Tarea guardada correctamente</string>
+    <string name="toast_error_saving_classes">❌ Error al guardar clases</string>
+    <string name="toast_error_saving_task">❌ Error al guardar tarea</string>
+    <string name="toast_invalid_class_data">Datos inválidos para clase.</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="color_light_blue">Azul Claro</string>
+    <string name="color_red">Rojo</string>
+    <string name="color_green">Verde</string>
+    <string name="color_purple">Púrpura</string>
+    <string name="color_yellow">Amarillo</string>
+    <string name="color_turquoise">Turquesa</string>
+    <string name="color_dark_orange">Naranja Oscuro</string>
+    <string name="color_dark_blue">Azul Marino</string>
+    <string name="color_silver">Plata</string>
+    <string name="color_dark_purple">Morado Oscuro</string>
+    <string name="color_pink">Rosa</string>
+    <string name="color_blue_violet">Azul Violeta</string>
+    <string name="color_sea_green">Verde Mar</string>
+    <string name="color_gold">Oro</string>
+    <string name="color_slate_blue">Azul Pizarra</string>
+    <string name="event_type_class">Clase</string>
+    <string name="event_type_task">Tarea</string>
+    <string-array name="rangos_dias">
+        <item>Lunes a Viernes</item>
+        <item>Lunes a Domingo</item>
+    </string-array>
+
+    <!-- HorarioSemanalActivity -->
+    <string name="dialog_filter_schedule_title">Filtrar Horario</string>
+    <string name="dialog_filter_time_range_label">Rango de horas:</string>
+    <string name="dialog_filter_from_label">De</string>
+    <string name="dialog_filter_to_label">A</string>
+    <string name="dialog_filter_show_days_label">Mostrar días:</string>
+    <string name="dialog_filter_mon_to_fri">Lunes a Viernes</string>
+    <string name="dialog_filter_mon_to_sun">Lunes a Domingo</string>
+    <string name="action_apply">Aplicar</string>
+    <string name="delete_event_title">Eliminar Evento</string>
+    <string name="delete_event_message">¿Deseas eliminar \"%1$s\"?</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="toast_filters_applied">Filtros aplicados correctamente</string>
+    <string name="event_deleted">Evento eliminado.</string>
+    <string name="error_deleting_event">Error al eliminar evento</string>
+    <string name="error_loading_events">Error al cargar eventos</string>
+
+
+    <!-- VerTareasActivity -->
+    <string name="event_repetition_display">🔁 Repetido %1$d semanas</string>
+
+    <string name="title_your_tasks_and_classes">Tus Tareas y Clases</string>
+    <string name="search_hint_event_name">Buscar evento por nombre</string>
+    <string name="title_active_reminders">🗓️  Próximos Eventos</string>
+    <string name="explanation_reminders">Aquí puedes gestionar tus tareas y clases, modificarlas o eliminarlas según necesites.</string>
+    <string name="no_events_registered">No hay eventos registrados</string>
+    <string name="user_not_authenticated">Usuario no autenticado</string>
+    <string name="edit_event_title">✏️ Editar Evento</string>
+    <string name="hint_event_name_edit">📌 Nombre del evento</string>
+    <string name="hint_classroom_optional_edit">🏫 Aula (opcional)</string>
+    <string name="label_event_type_edit">📂 Tipo</string>
+    <string name="label_date_edit">📅 Fecha</string>
+    <string name="label_start_time_edit">🕐 Hora inicio</string>
+    <string name="label_end_time_edit">🕑 Hora fin</string>
+    <string name="button_color_edit">🎨 Color</string>
+    <string name="label_days_of_week_class">📆 Días de clase</string>
+    <string name="button_save_changes">💾 Guardar cambios</string>
+    <string name="button_delete_event">🗑️ Eliminar evento</string>
+    <string name="cancel_action">Cancelar</string>
+    <string name="accept_action">Aceptar</string>
+    <string name="select_days_dialog_title">Selecciona los días</string>
+    <string name="option_only_for_classes">Esta opción solo está disponible para clases</string>
+    <string name="fill_required_fields">Por favor, completa todos los campos obligatorios</string>
+    <string name="select_at_least_one_day">Debes seleccionar al menos un día</string>
+    <string name="event_class_saved_successfully">📚 Clase guardada exitosamente</string>
+    <string name="event_task_saved_successfully">✅ Tarea actualizada exitosamente</string>
+    <string name="event_task_saved_successfully2">✅ Tarea actualizada exitosamente</string>
+
+    <string name="error_saving_changes">Error al guardar los cambios</string>
+    <string name="error_loading_event">Error al cargar el evento</string>
+    <string name="delete_event_confirmation_title">¿Eliminar evento?</string>
+    <string name="delete_event_confirmation_message">¿Estás seguro de que deseas eliminar este evento?</string>
+    <string name="yes_delete">Sí, eliminar</string>
+    <string name="repeated_classes_deleted">Todas las clases repetidas fueron eliminadas</string>
+    <string name="day_monday_full">Lunes</string>
+    <string name="day_tuesday_full">Martes</string>
+    <string name="day_wednesday_full">Miércoles</string>
+    <string name="day_thursday_full">Jueves</string>
+    <string name="day_friday_full">Viernes</string>
+    <string name="day_saturday_full">Sábado</string>
+    <string name="day_sunday_full">Domingo</string>
+    <string name="not_applicable">N/A</string>
+
+    <!-- NotificacionesActivity -->
+    <string name="title_active_reminders_notifications">🔔 Recordatorios Activos</string>
+    <string name="explanation_reminders_notifications">Puedes modificar o eliminar el recordatorio de cada clase o tarea.</string>
+    <string name="no_active_reminders">No hay recordatorios activos.</string>
+    <string name="error_loading_events_notifications">Error al cargar los eventos con recordatorios.</string>
+    <string name="no_date_available">Fecha no disponible</string>
+    <string name="event_detail_format">📂 %1$s: %2$s\n🕐 %3$s - %4$s\n📅 Días: %5$s\n📆 Fecha: %6$s\n⏰ %7$d min antes</string>
+    <string name="button_modify_reminder">Modificar</string>
+    <string name="button_delete_reminder">Eliminar</string>
+    <string name="dialog_title_how_many_minutes">¿Cuántos minutos antes quieres que se te recuerde?</string>
+    <string name="notification_updated_success">Recordatorio actualizado a %1$d minutos antes</string>
+    <string name="error_updating_notification">Error al actualizar el recordatorio</string>
+    <string name="dialog_title_delete_reminder">¿Eliminar recordatorio?</string>
+    <string name="dialog_message_confirm_delete_reminder">¿Estás seguro de eliminar el recordatorio para \"%1$s\" el día %2$s?</string>
+    <string name="yes_delete_button">Sí, eliminar</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="reminder_deleted_success">Recordatorio eliminado correctamente</string>
+    <string name="error_deleting_reminder">Error al eliminar el recordatorio</string>
+
+    <!-- ExportarHorarioPDFActivity -->
+    <string name="export_title">🗓️ Exportar horario semanal</string>
+    <string name="export_subtitle">Elige una semana para exportar tu horario</string>
+    <string name="previous_week_button">⬅️</string>
+    <string name="next_week_button">➡️</string>
+    <string name="time_range_from">🕗 Desde: %1$s</string>
+    <string name="time_range_to">🕕 Hasta: %1$s</string>
+    <string name="button_generate_pdf">📄 Generar PDF</string>
+    <string name="button_save_local">💾 Guardar</string>
+    <string name="button_share">📤 Compartir</string>
+    <string name="pdf_title_schedule">🗓️ HORARIO SEMANAL</string>
+    <string name="pdf_user_label">👤 Usuario: %1$s</string>
+    <string name="pdf_week_label">📅 Semana: %1$s</string>
+    <string name="pdf_classroom_label">📍 Aula: %1$s</string>
+    <string name="pdf_default_user_name">Invitado</string>
+    <string name="pdf_preview_description">Vista previa del PDF</string>
+    <string name="toast_pdf_generated">✅ PDF generado correctamente</string>
+    <string name="toast_generate_pdf_first">⚠️ Primero genera el PDF</string>
+    <string name="toast_saved_to_documents">💾 Guardado en la carpeta %1$s</string>
+    <string name="toast_error_saving_pdf">❌ Error al guardar PDF: %1$s</string>
+    <string name="toast_error_saving_locally">❌ No se pudo guardar el PDF localmente: %1$s</string>
+    <string name="toast_error_loading_events">❌ Error al cargar eventos</string>
+    <string name="toast_user_name_not_found">⚠️ No se pudo obtener el nombre del usuario desde Firestore</string>
+    <string name="toast_events_loaded">📅 Eventos cargados: %1$d</string>
+    <string name="toast_error_rendering_preview">❌ Error al generar vista previa: %1$s</string>
+    <string name="toast_logo_not_found">⚠️ No se encontró el logo. Se usará título por defecto</string>
+    <string name="toast_error_sharing_pdf">❌ Error al compartir PDF: %1$s</string>
+    <string name="share_pdf_chooser_title">Compartir PDF</string>
+    <string name="time_picker_title">Selecciona una hora</string>
+
+
+    <!-- AjustesActivity -->
+    <string name="default_username_placeholder">Tu nombre</string>
+    <string name="btn_ver_editar_perfil">👤 Ver/Editar Perfil</string>
+    <string name="btn_cambiar_modo_oscuro_claro">🌙 Cambiar Modo Oscuro/Claro</string>
+    <string name="btn_cambiar_idioma">🌐 Cambiar Idioma</string>
+    <string name="btn_ver_datos_sincronizados">🔄 Ver Datos Sincronizados</string>
+    <string name="btn_terminos_condiciones">📃 Términos y Condiciones</string>
+    <string name="btn_cerrar_sesion_eliminar_cuenta">🚪 Cerrar sesión / Eliminar datos</string>
+    <string name="dialog_edit_profile_title">Editar Perfil</string>
+    <string name="dialog_save_button">Guardar</string>
+    <string name="dialog_cancel_button">Cancelar</string>
+    <string name="toast_name_cannot_be_empty">El nombre no puede estar vacío</string>
+    <string name="toast_profile_updated">Perfil actualizado correctamente</string>
+    <string name="toast_error_updating_profile">Error al actualizar el perfil</string>
+    <string name="select_image_chooser_title">Seleccionar imagen</string>
+    <string name="dialog_change_language_title">Seleccionar idioma</string>
+    <string name="dialog_change_language_option_es">Español</string>
+    <string name="dialog_change_language_option_en">Inglés</string>
+    <string name="dialog_change_language_option_pt_rBR">Portugués</string>
+    <string name="dialog_change_language_option_it">Italiano</string>
+    <string name="dialog_change_language_option_fr">Francés</string>
+    <string name="dialog_what_to_do_title">¿Qué deseas hacer?</string>
+    <string name="dialog_logout_option">Cerrar sesión</string>
+    <string name="dialog_delete_data_option">Eliminar todos mis datos</string>
+    <string name="toast_session_closed">Sesión cerrada correctamente</string>
+    <string name="toast_no_active_user">No hay un usuario activo</string>
+    <string name="dialog_confirm_delete_data_title">¿Estás seguro?</string>
+    <string name="dialog_confirm_delete_data_message">Se eliminarán los eventos y recordatorios de tu agenda. Esta acción es permanente.</string>
+    <string name="dialog_confirm_delete_data_button">Sí, eliminar</string>
+    <string name="toast_data_deleted_successfully">Datos eliminados correctamente</string>
+    <string name="toast_error_deleting_data">Error al eliminar datos: %1$s</string>
+    <string name="toast_error_deleting_data_fetch">Error al obtener datos: %1$s</string>
+    <string name="dialog_reauth_title">Confirmar identidad</string>
+    <string name="dialog_reauth_message">Para eliminar tus datos, primero necesitamos confirmar tu identidad con Google.</string>
+    <string name="dialog_reauth_confirm_button">Continuar</string>
+    <string name="toast_reauthentication_success">Identidad confirmada correctamente</string>
+    <string name="toast_reauthentication_failed">Falló la reautenticación: %1$s</string>
+    <string name="toast_reauthentication_id_token_null">Token de autenticación nulo</string>
+    <string name="toast_reauthentication_error">Error de autenticación: %1$s</string>
+    <string name="toast_reauthentication_cancelled">Reautenticación cancelada</string>
+    <string name="toast_deletion_cancelled">Eliminación cancelada</string>
+    <string name="sync_data_title">📡 Datos Sincronizados</string>
+    <string name="not_available">No disponible</string>
+    <string name="unknown">Desconocido</string>
+    <string name="no_active_session">⚠️ No hay sesión activa</string>
+    <string name="profile_section_title">👤 Perfil actualizado</string>
+    <string name="profile_name_label">Nombre: %1$s</string>
+    <string name="profile_email_label">Correo: %1$s</string>
+    <string name="profile_id_label">UID: %1$s</string>
+    <string name="profile_provider_label">Proveedor: %1$s</string>
+    <string name="profile_account_created_label">Cuenta creada: %1$s</string>
+    <string name="profile_last_access_label">Último acceso: %1$s</string>
+    <string name="classes_synced_count_format">📘 Clases sincronizadas: %1$s</string>
+    <string name="tasks_synced_count_format">📝 Tareas sincronizadas: %1$s</string>
+    <string name="last_sync_datetime_format">⏱️ Última sincronización: %1$s</string>
+    <string name="error_message_generic">Ocurrió un error</string>
+    <string name="classes_synced_error_format">📘 Error al obtener clases: %1$s</string>
+    <string name="tasks_synced_error_format">📝 Error al obtener tareas: %1$s</string>
+    <string name="last_sync_error_format">⏱️ Error al obtener fecha: %1$s</string>
+    <string name="terms_conditions_title">📜 Términos y Condiciones</string>
+    <string name="terms_conditions_body">
+        📅 Bienvenido a KalendU\n\n
+        🔹 Uso General:\n
+        Esta aplicación fue diseñada para ayudarte a gestionar tu tiempo y actividades de forma eficiente.\n\n
+        🔹 Privacidad:\n
+        Respetamos tu información personal. Solo usamos tus datos para mejorar tu experiencia.\n\n
+        🔹 Responsabilidad:\n
+        KalendU no se responsabiliza por la pérdida de información si eliminas tu cuenta o desinstalas la app.\n\n
+        🔹 Cambios:\n
+        Podemos actualizar estos términos sin previo aviso. Te recomendamos revisarlos periódicamente.\n\n
+        💙 Gracias por usar KalendU
+    </string>
+
+    <!-- Complementos -->
+    <string name="add_task">Añadir clase/tarea</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete_account">Eliminar cuenta</string>
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="export_pdf">Exportar PDF</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="select_image">Selecciona una imagen</string>
+    <string name="settings">Ajustes</string>
+    <string name="today_is">Hoy es</string>
+    <string name="view_schedule">Ver horario</string>
+    <string name="view_tasks">Ver tareas</string>
+    <string name="what_do_you_want">¿Qué deseas hacer?</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="save">Guardar</string>
+    <string name="change_language">Cambiar Idioma</string>
+    <string name="loading_event_data">Cargando datos del evento...</string>
+    <string name="error_deleting_events">Error al eliminar eventos</string>
+    <string name="error_searching_events">Error al buscar eventos</string>
+    <string name="event_icon_class">📘</string>
+    <string name="event_icon_task">📄</string>
+    <string name="event_type_class_display">Clase</string>
+    <string name="event_type_task_display">Tarea</string>
+    <string name="event_classroom_prefix">📍 Aula: %1$s</string>
+    <string name="event_no_classroom">Sin aula</string>
+    <string name="event_repetition_weeks_singular">🔁 Repetido %1$d semana</string>
+    <string name="event_repetition_weeks_plural">🔁 Repetido %1$d semanas</string>
+    <string name="event_no_repetition">No se repite</string>
+    <string name="default_color_error">#CCCCCC</string>
+    <string name="dialog_delete_account_option">Eliminar cuenta</string>
+    <string name="toast_account_deleted">Cuenta eliminada</string>
+    <string name="cd_profile_photo">Foto de perfil del usuario</string>
+    <string name="toast_error_deleting_account">Error al eliminar cuenta: %s</string>
+    <string name="generic_error_message">Error desconocido</string>
+    <string name="toast_reauth_flow_failed">Error al iniciar el flujo de reautenticación: %1$s</string>
+    <string name="error_start_time_after_end_time">La hora de inicio no puede ser posterior a la hora de fin.</string>
+    <string name="activate_alarm_sound_switch">Activar Sonido de Alarma</string>
+    <string name="choose_sound_source_label">Elegir Origen del Sonido:</string>
+    <string name="radio_button_app_sound">Sonido de la App</string>
+    <string name="radio_button_custom_sound">Sonido Personalizado (desde el teléfono)</string>
+    <string name="button_select_custom_sound">Seleccionar Sonido del Teléfono</string>
+    <string name="no_sound_selected_label">Ningún sonido seleccionado</string>
+    <string name="button_preview_sound">Previsualizar Sonido</string>
+    <string name="sound_selection_error">Error al seleccionar el sonido.</string>
+    <string name="sound_preview_error">Error al previsualizar el sonido.</string>
+    <string name="sound_permission_denied">Permiso de lectura de almacenamiento denegado. No se puede seleccionar sonido personalizado.</string>
+    <string name="sound_preview_stopped">Previsualización detenida.</string>
+    <string name="sound_not_selected_toast">Por favor, selecciona un sonido primero.</string>
+    <string name="alarm_sound_title">Sonido de Alarma</string>
+    <string name="default_app_sound_name">Sonido Predeterminado</string>
+    <string name="error_copying_sound">Error al copiar el archivo de sonido.</string>
+    <string name="sound_selected_and_copied">Sonido seleccionado y copiado.</string>
+    <string name="activate_vibration_switch">📳 Activar vibración</string>
+    <string name="button_test_vibration">Probar Vibración</string>
+
+
+    <!-- New sound names for the spinner -->
+    <string name="sound_1_name">Sonido 1</string>
+    <string name="sound_2_name">Sonido 2</string>
+    <string name="sound_3_name">Sonido 3</string>
+    <string name="sound_4_name">Sonido 4</string>
+    <string name="sound_5_name">Sonido 5</string>
+    <string name="sound_6_name">Sonido 6</string>
+    <string name="sound_7_name">Sonido 7</string>
+    <string name="sound_8_name">Sonido 8</string>
+    <string name="sound_9_name">Sonido 9</string>
+    <string name="sound_10_name">Sonido 10</string>
+    <!-- New vibration pattern names for the spinner -->
+    <string name="vibration_pattern_none">Ninguna</string>
+    <string name="vibration_pattern_short">Corta</string>
+    <string name="vibration_pattern_long">Larga</string>
+    <string name="vibration_pattern_double_short">Doble Corta</string>
+    <string name="vibration_pattern_heartbeat">Latido</string>
+    <string name="vibration_disabled_toast">Vibración desactivada.</string>
+    <string name="device_no_vibration_support_toast">El dispositivo no soporta vibración.</string>
+    <string name="error_invalid_date_format">Formato de fecha inválido.</string>
+    <string name="event_class_updated_successfully"> ✅ Clase actualizada exitosamente</string>
+    <string name="error_updating_class_series">Error al actualizar la serie de clases.</string>
+
+    <string name="alarm_notification_title">¡Alarma de KalendU!</string>
+    <string name="alarm_notification_content">⏰ Es hora de tu %1$s: %2$s %3$s</string>
+    <string name="alarm_stop_button">Detener Alarma</string>
+    <string name="hint_repetition_weeks">🔁 Número de semanas de repetición</string>
+    <string name="enter_valid_repetition_weeks">Por favor, introduce un número válido de semanas de repetición (mayor que 0).</string>
+    <string name="delete_class_options_title">Eliminar clase repetida</string>
+    <string name="delete_class_options_message">¿Quieres eliminar solo esta instancia de la clase o todas las clases repetidas?</string>
+    <string name="delete_this_class_only">Solo esta clase</string>
+    <string name="delete_all_repeated_classes">Todas las clases repetidas</string>
+    <string name="error_deleting_repeated_classes">Error al eliminar las clases repetidas</string>
+    <string name="error_loading_classes_to_delete">Error al cargar clases para eliminar</string>
+    <string name="delete_event_confirmation_message2">¿Estás seguro de que quieres eliminar "%1$s"?</string>
+    <string name="delete_event">Eliminar evento</string>
+    <string name="event_type_class_prefix">Clase: %1$s</string>
+    <string name="event_type_task_prefix">Tarea: %1$s</string>
+    <string name="time_range_format">🕒 %1$s - %2$s</string>
+    <string name="time_single_format">🕒 %1$s</string>
+    <string name="days_label_format">🗓️ Días: %1$s</string>
+    <string name="date_label_format">📅 Fecha: %1$s</string>
+    <string name="minutes_before_label_format">⏰ %1$d min antes</string>
+    <string name="sin_eventos_internet">No se pudieron cargar los eventos. Necesita conexión a Internet.</string>
+
+    <string name="no_connection_delete_event">No hay conexión a Internet para eliminar el evento.</string>
+    <string name="no_events_matching_search">No se encontraron eventos que coincidan con la búsqueda.</string>
+    <string name="error_updating_events_offline">Error al actualizar eventos inactivos. Se intentará más tarde con conexión.</string>
+
 </resources>
+

@@ -1,224 +1,480 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="?attr/screenBackgroundColor"
+    android:fillViewport="true"
+    android:padding="@dimen/kalendu_card_padding"
+    tools:context=".AnadirClaseTareaActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnCerrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="←"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
-            android:textSize="18sp"
-            />
-
-        <LinearLayout
-            android:id="@+id/seccionSelector"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/btnSeleccionarCurso"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Curso" />
-
-            <Button
-                android:id="@+id/btnSeleccionarTarea"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Tarea" />
-        </LinearLayout>
-
-        <!-- Bloque: Selector de tipo (Curso o Tarea) -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿Qué deseas añadir?"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:layout_marginBottom="8dp" />
-
-        <Spinner
-            android:id="@+id/spinnerTipo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp" />
-
-        <!-- Bloque: Formulario de Curso -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/layoutCurso"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginBottom="16dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="12dp">
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="@dimen/kalendu_card_radius"
+            app:cardElevation="@dimen/kalendu_card_elevation"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:padding="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/kalendu_card_padding">
 
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView android:textAppearance="@style/TextAppearance.KalendU.ScreenTitle"
+                    android:id="@+id/AddEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingBottom="16dp"
+                    android:text="📅 Añadir Evento"
+                    />
+
+                <EditText
+                    android:id="@+id/et_event_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nombre del curso">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etNombreCurso"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:hint="Nombre del evento"
+                    android:inputType="textCapSentences"
+                    android:textColor="?android:textColorPrimary"
+                    android:textColorHint="?android:textColorSecondary"
+                    android:backgroundTint="?attr/editTextBackgroundTint"
+                    android:padding="12dp"
+                    android:layout_marginTop="12dp" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
+                    android:id="@+id/et_classroom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Aula"
-                    android:layout_marginTop="12dp">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etAulaCurso"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:inputType="textCapWords"
+                    android:textColor="?android:textColorPrimary"
+                    android:textColorHint="?android:textColorSecondary"
+                    android:backgroundTint="?attr/editTextBackgroundTint"
+                    android:padding="12dp"
+                    android:layout_marginTop="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_event_type_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo:"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_event_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="16dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Clase"
+                            android:textColor="?android:textColorPrimary"
+                            android:buttonTint="?attr/radioButtonClassTint"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/rb_task"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tarea"
+                            android:textColor="?android:textColorPrimary"
+                            android:buttonTint="?attr/radioButtonTaskTint"
+                            android:layout_marginStart="16dp" />
+                    </RadioGroup>
+                </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tv_days_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Color del curso"
+                    android:text="Días (para clases):"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="16sp"
+                    android:layout_marginTop="20dp" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/ll_days_checkboxes"
+                    app:flexWrap="wrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexDirection="row"
+                    android:layout_marginTop="8dp">
+
+                    <CheckBox android:id="@+id/cb_monday" android:layout_width="48dp" android:minHeight="48dp" android:layout_height="wrap_content" android:text="L" android:textColor="?attr/checkBoxTextColor" android:buttonTint="?attr/checkBoxDaysTint" />
+                    <CheckBox android:id="@+id/cb_tuesday" android:layout_width="48dp" android:minHeight="48dp" android:layout_height="wrap_content" android:text="M" android:textColor="?attr/checkBoxTextColor" android:buttonTint="?attr/checkBoxDaysTint" />
+                    <CheckBox android:id="@+id/cb_wednesday" android:layout_width="48dp" android:minHeight="48dp" android:layout_height="wrap_content" android:text="X" android:textColor="?attr/checkBoxTextColor" android:buttonTint="?attr/checkBoxDaysTint" />
+                    <CheckBox android:id="@+id/cb_thursday" android:layout_width="48dp" android:minHeight="48dp" android:layout_height="wrap_content" android:text="J" android:textColor="?attr/checkBoxTextColor" android:buttonTint="?attr/checkBoxDaysTint" />
+                    <CheckBox android:id="@+id/cb_friday" android:layout_width="48dp" android:minHeight="48dp" android:layout_height="wrap_content" android:text="V" android:textColor="?attr/checkBoxTextColor" android:buttonTint="?attr/checkBoxDaysTint" />
+                    <CheckBox android:id="@+id/cb_saturday" android:layout_width="48dp" android:minHeight="48dp" android:layout_height="wrap_content" android:text="S" android:textColor="?attr/checkBoxTextColor" android:buttonTint="?attr/checkBoxDaysTint" />
+                    <CheckBox android:id="@+id/cb_sunday" android:layout_width="48dp" android:minHeight="48dp" android:layout_height="wrap_content" android:text="D" android:textColor="?attr/checkBoxTextColor" android:buttonTint="?attr/checkBoxDaysTint" />
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_repeat_weeks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_repeat_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Repetir por:"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_repeat_weeks"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginStart="12dp"
+                        android:hint="-"
+                        android:textColor="?android:textColorPrimary"
+                        android:textColorHint="?android:textColorSecondary"
+                        android:backgroundTint="?attr/editTextBackgroundTint"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_weeks_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="semanas"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <Button android:textAllCaps="false"
+                    android:id="@+id/btn_select_repetition_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📅 Iniciar Repetición Desde"
+                    android:textColor="?attr/buttonSecondaryTextColor"
+                    android:backgroundTint="?attr/buttonSecondaryBackgroundColor"
+                    android:paddingVertical="12dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="24dp">
+
+                    <Button android:textAllCaps="false"
+                        android:id="@+id/btn_select_start_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hora Inicio"
+                        android:textColor="?attr/buttonSecondaryTextColor"
+                        android:backgroundTint="?attr/buttonSecondaryBackgroundColor"
+                        android:paddingVertical="12dp" />
+
+                    <Button android:textAllCaps="false"
+                        android:id="@+id/btn_select_end_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hora Fin"
+                        android:textColor="?attr/buttonSecondaryTextColor"
+                        android:backgroundTint="?attr/buttonSecondaryBackgroundColor"
+                        android:paddingVertical="12dp"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <Button android:textAllCaps="false"
+                    android:id="@+id/btn_select_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📅 Seleccionar Fecha"
+                    android:textColor="?attr/buttonSecondaryTextColor"
+                    android:backgroundTint="?attr/buttonSecondaryBackgroundColor"
+                    android:paddingVertical="12dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardNotificacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="?attr/cardSecondaryBackgroundColor"
+                    app:cardCornerRadius="@dimen/kalendu_card_radius"
+                    app:cardElevation="@dimen/kalendu_card_elevation">
+
+                    <LinearLayout
+                        android:id="@+id/llNotificationOptions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvNotificacion"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="🔔 Activar recordatorio"
+                                android:textColor="?android:textColorPrimary"
+                                android:textSize="16sp" />
+
+                            <Switch
+                                android:id="@+id/swNotificaciones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:thumbTint="?attr/switchThumbTint"
+                                android:trackTint="?attr/switchTrackTint" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinnerReminderTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:visibility="gone"
+                            android:backgroundTint="?attr/spinnerBackgroundTint"
+                            android:popupBackground="?attr/spinnerPopupBackground"
+                            android:padding="8dp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_sound_options_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_alarm_sound_label"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/activate_alarm_sound_switch"
+                                    android:textColor="?android:textColorPrimary"
+                                    android:textSize="16sp" />
+
+                                <Switch
+                                    android:id="@+id/sw_alarm_sound"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:thumbTint="?attr/switchThumbTint"
+                                    android:trackTint="?attr/switchTrackTint" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_sound_type_selection"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="12dp"
+                                android:visibility="gone">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/choose_sound_source_label"
+                                    android:textColor="?android:textColorPrimary"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="8dp"/>
+
+                                <RadioGroup
+                                    android:id="@+id/rg_sound_source"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:id="@+id/rb_app_sound"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/radio_button_app_sound"
+                                        android:textColor="?android:textColorPrimary"
+                                        android:buttonTint="?attr/radioButtonClassTint"
+                                        android:checked="true" />
+                                    <RadioButton
+                                        android:id="@+id/rb_custom_sound"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/radio_button_custom_sound"
+                                        android:textColor="?android:textColorPrimary"
+                                        android:buttonTint="?attr/radioButtonTaskTint"
+                                        android:layout_marginTop="8dp" />
+                                </RadioGroup>
+
+                                <Spinner
+                                    android:id="@+id/spinner_app_sounds"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:visibility="visible"
+                                    android:backgroundTint="?attr/spinnerBackgroundTint"
+                                    android:popupBackground="?attr/spinnerPopupBackground"
+                                    android:padding="8dp" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_custom_sound_selection"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="12dp"
+                                    android:visibility="gone">
+                                    <Button android:textAllCaps="false"
+                                        android:id="@+id/btn_select_custom_sound"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/button_select_custom_sound"
+                                        android:textColor="?attr/buttonSecondaryTextColor"
+                                        android:backgroundTint="?attr/buttonSecondaryBackgroundColor"
+                                        android:paddingVertical="10dp"
+                                        app:cornerRadius="@dimen/kalendu_control_radius" />
+
+                                    <TextView
+                                        android:id="@+id/tv_selected_custom_sound"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:text="@string/no_sound_selected_label"
+                                        android:textColor="?android:textColorSecondary"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <Button android:textAllCaps="false"
+                                    android:id="@+id/btn_preview_sound"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/button_preview_sound"
+                                    android:textColor="?attr/buttonSecondaryTextColor"
+                                    android:backgroundTint="?attr/buttonSecondaryBackgroundColor"
+                                    android:paddingVertical="8dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:visibility="gone"
+                                    app:cornerRadius="@dimen/kalendu_control_radius" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_vibration_options_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="20dp"
+                                android:visibility="gone">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_vibration_label"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/activate_vibration_switch"
+                                        android:textColor="?android:textColorPrimary"
+                                        android:textSize="16sp" />
+
+                                    <Switch
+                                        android:id="@+id/sw_vibration"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:thumbTint="?attr/switchThumbTint"
+                                        android:trackTint="?attr/switchTrackTint" />
+                                </LinearLayout>
+
+                                <Spinner
+                                    android:id="@+id/spinnerVibrationPattern"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:visibility="gone"
+                                    android:backgroundTint="?attr/spinnerBackgroundTint"
+                                    android:popupBackground="?attr/spinnerPopupBackground"
+                                    android:padding="8dp" />
+
+                                <Button android:textAllCaps="false"
+                                    android:id="@+id/btn_test_vibration"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/button_test_vibration"
+                                    android:textColor="?attr/buttonSecondaryTextColor"
+                                    android:backgroundTint="?attr/buttonSecondaryBackgroundColor"
+                                    android:paddingVertical="8dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:visibility="gone"
+                                    app:cornerRadius="@dimen/kalendu_control_radius" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button android:textAllCaps="false"
+                    android:id="@+id/btn_select_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎨 Color"
+                    android:textColor="?attr/buttonSecondaryTextColor"
+                    android:backgroundTint="?attr/buttonSecondaryBackgroundColor"
+                    android:drawableStart="@drawable/ic_palette"
+                    android:drawablePadding="8dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingVertical="12dp"
+                    app:cornerRadius="@dimen/kalendu_control_radius" />
+
+                <Button android:textAllCaps="false"
+                    android:id="@+id/btn_save_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✅ GUARDAR EVENTO"
+                    android:textColor="?attr/buttonPrimaryTextColor"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="12dp" />
-
-                <Spinner
-                    android:id="@+id/spinnerColorCurso"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hora de inicio"
-                    android:layout_marginTop="12dp" />
-
-                <Button
-                    android:id="@+id/btnHoraInicio"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Seleccionar hora de inicio"
-                    android:layout_marginTop="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hora de fin"
-                    android:layout_marginTop="12dp" />
-
-                <Button
-                    android:id="@+id/btnHoraFin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Seleccionar hora de fin"
-                    android:layout_marginTop="8dp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- Bloque: Formulario de Tarea -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/layoutTarea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginBottom="16dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="12dp">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Título de la tarea">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etTituloTarea"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Descripción"
-                    android:layout_marginTop="12dp">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etDescripcionTarea"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hora de la tarea"
-                    android:layout_marginTop="12dp" />
-
-                <Button
-                    android:id="@+id/btnHoraTarea"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Seleccionar hora de tarea"
-                    android:layout_marginTop="8dp" />
-
-                <Button
-                    android:id="@+id/btnFechaTarea"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Seleccionar fecha de entrega"
-                    android:layout_marginTop="8dp" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Curso relacionado"
-                    android:layout_marginTop="12dp" />
-
-                <Spinner
-                    android:id="@+id/spinnerCursoRelacionado"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="?attr/buttonPrimaryBackgroundColor"
+                    android:paddingVertical="14dp"
+                    app:cornerRadius="@dimen/kalendu_control_radius" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-        <!-- Bloque: Botón de guardar -->
-        <Button
-            android:id="@+id/btnGuardar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardar"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="@color/purple_500"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

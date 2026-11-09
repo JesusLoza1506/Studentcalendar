@@ -1,64 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mainLayout"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/kalendu_background"
+    tools:context=".horariosemanal.HorarioSemanalActivity">
 
-    <!-- Encabezado de días -->
-    <HorizontalScrollView
-        android:id="@+id/headerScroll"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:scrollbars="none">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:background="@color/kalendu_feature"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/kalendu_feature">
+
+        <ImageButton
+            android:id="@+id/btnPreviousWeek"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/outline_arrow_left_alt_24"
+            android:contentDescription="Semana Anterior"
+            app:tint="@color/kalendu_primary" />
+
+        <TextView
+            android:id="@+id/tvCurrentWeekRange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="24 JUN - 30 JUN"
+            android:textColor="@color/kalendu_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp" />
+
+        <ImageButton
+            android:id="@+id/btnNextWeek"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/outline_arrow_right_alt_24"
+            android:contentDescription="Semana Siguiente"
+            app:tint="@color/kalendu_primary" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/corner_spacer"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:background="@color/kalendu_feature"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/kalendu_feature"/>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_view_header"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:scrollbars="none"
+        android:background="@color/kalendu_feature"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toEndOf="@id/corner_spacer"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-            android:id="@+id/headerDays"
+            android:id="@+id/day_headers_layout"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal" />
     </HorizontalScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/scrollViewGeneral"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_scroll_view_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="?attr/actionBarSize"
+        android:clipToPadding="false">
 
-        <!-- Etiquetas de horas -->
-        <ScrollView
-            android:id="@+id/hourScroll"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:scrollbars="none">
-
-            <LinearLayout
-                android:id="@+id/hourLabels"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
-
-        <!-- Celdas del horario -->
-        <HorizontalScrollView
-            android:id="@+id/bodyScroll"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none">
+            android:orientation="horizontal"
+            android:background="@color/kalendu_surface">
 
-            <ScrollView
-                android:id="@+id/bodyVerticalScroll"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/hoursColumnLayout"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/kalendu_feature"
+                android:gravity="center_horizontal|center_vertical" />
+            <View
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:scrollbars="none">
+                android:background="@color/kalendu_outline" />
 
-                <android.widget.GridLayout
-                    android:id="@+id/gridHorario"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:columnCount="7"
-                    android:rowCount="24" />
-            </ScrollView>
-        </HorizontalScrollView>
-    </LinearLayout>
-</LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSchedule"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/kalendu_surface"
+                android:overScrollMode="never"
+                android:clipToPadding="false" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Filtrar Horario"
+        app:tint="@color/kalendu_primary"
+        app:backgroundTint="#007BFF"
+        app:srcCompat="@drawable/outline_airplay_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="80dp"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_navigation"
+        android:background="?attr/cardBackgroundColor"
+        app:labelVisibilityMode="labeled"
+        style="@style/Widget.App.BottomNavigationView"
+        app:itemIconTint="@color/bottom_nav_item_icon_color"
+        app:itemTextColor="@color/bottom_nav_item_text_color"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

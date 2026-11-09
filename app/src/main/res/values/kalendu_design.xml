@@ -1,0 +1,38 @@
+<resources>
+    <color name="kalendu_primary">#354BC5</color>
+    <color name="kalendu_on_primary">#FFFFFF</color>
+    <color name="kalendu_accent">#166B66</color>
+    <color name="kalendu_background">#F3F5FA</color>
+    <color name="kalendu_surface">#FFFFFF</color>
+    <color name="kalendu_feature">#E9EDFC</color>
+    <color name="kalendu_text">#18243D</color>
+    <color name="kalendu_muted">#4A5A73</color>
+    <color name="kalendu_outline">#CCD4E4</color>
+    <color name="kalendu_danger">#A62840</color>
+    <dimen name="kalendu_page_padding">20dp</dimen>
+    <dimen name="kalendu_card_padding">20dp</dimen>
+    <dimen name="kalendu_card_radius">20dp</dimen>
+    <dimen name="kalendu_control_radius">12dp</dimen>
+    <dimen name="kalendu_card_elevation">2dp</dimen>
+    <style name="TextAppearance.KalendU.ScreenTitle" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TextAppearance.KalendU.Body" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Widget.KalendU.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/kalendu_control_radius</item>
+    </style>
+    <style name="ShapeAppearance.KalendU.Dialog" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">@dimen/kalendu_card_radius</item>
+    </style>
+    <style name="ThemeOverlay.KalendU.Alert" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.KalendU.Dialog</item>
+    </style>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/kalendu_card_padding"
+    android:background="@drawable/dialog_background_dark">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filtrar Horario"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/kalendu_text"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/timeRangeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rango de Horas:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/kalendu_text"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/fromLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="De:"
+            android:textSize="16sp"
+            android:textColor="@color/kalendu_muted"
+            android:layout_marginEnd="8dp"/>
+
+        <com.google.android.material.button.MaterialButton android:textAllCaps="false"
+            android:id="@+id/btnStartTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"  android:layout_weight="1"
+            android:text="08:00"
+            android:textSize="16sp"
+            android:paddingVertical="10dp"
+            app:cornerRadius="@dimen/kalendu_control_radius"
+            android:backgroundTint="@color/kalendu_primary"
+            android:textColor="@color/kalendu_on_primary"/>
+
+        <TextView
+            android:id="@+id/toLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A:"
+            android:textSize="16sp"
+            android:textColor="@color/kalendu_muted"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"/>
+
+        <com.google.android.material.button.MaterialButton android:textAllCaps="false"
+            android:id="@+id/btnEndTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="17:00"
+            android:textSize="16sp"
+            android:paddingVertical="10dp"
+            app:cornerRadius="@dimen/kalendu_control_radius"
+            android:backgroundTint="@color/kalendu_primary"
+            android:textColor="@color/kalendu_on_primary"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showDaysLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Días:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/kalendu_text"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgDayRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/rbMonToFri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunes a Viernes"
+            android:textSize="16sp"
+            android:checked="true"
+            android:textColor="@color/kalendu_on_primary"/>
+
+        <RadioButton
+            android:id="@+id/rbMonToSun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunes a Domingo"
+            android:textSize="16sp"
+            android:textColor="@color/kalendu_on_primary"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton android:textAllCaps="false"
+            android:id="@+id/btnCancelFilter"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:textColor="#AED6F1" />
+
+        <com.google.android.material.button.MaterialButton android:textAllCaps="false"
+            android:id="@+id/btnApplyFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aplicar"
+            android:backgroundTint="@color/kalendu_primary"
+            android:textColor="@color/kalendu_on_primary"
+            android:layout_marginStart="8dp"
+            app:cornerRadius="@dimen/kalendu_control_radius"
+            android:paddingVertical="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

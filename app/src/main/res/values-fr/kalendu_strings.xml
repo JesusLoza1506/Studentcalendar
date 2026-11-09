@@ -1,0 +1,15 @@
+<resources>
+    <string name="invalid_series">Choisissez de 1 à %1$d semaines et des jours avec des cours à venir.</string>
+    <string name="invalid_future_event">Saisissez un nom, une date et une heure futures valides.</string>
+    <string name="reminder_time_passed">L’heure du rappel est passée. Réduisez le délai de rappel.</string>
+    <string name="delete_data_wrong_account">Confirmez avec le même compte Google pour effacer son agenda.</string>
+    <string name="delete_data_retry">Suppression incomplète. Vérifiez votre connexion et réessayez.</string>
+    <string name="last_cloud_check">Serveur consulté : %1$s</string>
+    <string name="pdf_invalid_filter">Choisissez au moins un jour et une heure de fin après le début.</string>
+    <string name="pdf_saved">PDF enregistré.</string>
+    <string name="login_subtitle">Votre agenda universitaire à portée de main</string>
+    <string name="login_google">Se connecter avec Google</string>
+    <string name="no_connection_delete_event">Connectez-vous à Internet pour supprimer cet événement.</string>
+    <string name="no_events_matching_search">Aucun événement ne correspond à la recherche.</string>
+    <string name="error_updating_events_offline">Impossible de mettre à jour les événements inactifs. Réessayez avec une connexion.</string>
+</resources>

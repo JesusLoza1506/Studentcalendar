@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Configuración por variante y claves de firma
+/app/src/debug/google-services.json
+/app/src/release/google-services.json
+*.jks
+*.keystore

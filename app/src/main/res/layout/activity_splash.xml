@@ -4,20 +4,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1C2833"
-    android:padding="24dp">
+    android:background="@drawable/kalendu_auth_background"
+    android:padding="0dp"> <ImageView
+    android:id="@+id/logoImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="Imagen principal o logo de la aplicación"
+    android:elevation="12dp"
+    android:src="@drawable/xd"
+    android:scaleType="centerCrop"
+    android:translationZ="12dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/logoImage"
-        android:layout_width="470dp"
-        android:layout_height="552dp"
-        android:contentDescription="Imagen principal o logo de la aplicación"
-        android:elevation="12dp"
-        android:src="@drawable/xd"
-        android:translationZ="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="screenBackgroundColor" format="color" />
+    <attr name="cardBackgroundColor" format="color" />
+    <attr name="cardSecondaryBackgroundColor" format="color" />
+
+    <attr name="emptyStateTextColor" format="color" />
+    <attr name="weekNavigationButtonColor" format="color" />
+    <attr name="selectedWeekTextColor" format="color" />
+    <attr name="timeRangeTextColor" format="color" />
+    <attr name="checkBoxTextColor" format="color" />
+    <attr name="nextClassTitleColor" format="color" /> <attr name="editTextBackgroundTint" format="color" />
+
+    <attr name="radioButtonClassTint" format="color" />
+    <attr name="radioButtonTaskTint" format="color" />
+
+    <attr name="switchThumbTint" format="color" />
+    <attr name="switchTrackTint" format="color" />
+
+    <attr name="spinnerBackgroundTint" format="color" />
+    <attr name="spinnerPopupBackground" format="color" />
+
+    <attr name="buttonPrimaryBackgroundColor" format="color" />
+    <attr name="buttonPrimaryTextColor" format="color" />
+    <attr name="buttonPrimaryStrokeColor" format="color" />
+
+    <attr name="buttonSecondaryBackgroundColor" format="color" />
+    <attr name="buttonSecondaryTextColor" format="color" />
+    <attr name="buttonSecondaryStrokeColor" format="color" />
+
+    <attr name="buttonDestructiveBackgroundColor" format="color" />
+    <attr name="buttonDestructiveTextColor" format="color" />
+    <attr name="buttonDestructiveStrokeColor" format="color" />
+
+    <attr name="buttonShareBackgroundColor" format="color" />
+    <attr name="buttonShareTextColor" format="color" />
+    <attr name="buttonShareStrokeColor" format="color" />
+
+    <attr name="settingsButtonBackgroundColor" format="color" />
+    <attr name="settingsButtonTextColor" format="color" />
+    <attr name="settingsButtonStrokeColor" format="color" />
+
+    <attr name="searchViewBackground" format="color" /> <attr name="searchViewHintColor" format="color" />
+    <attr name="searchViewTextColor" format="color" />
+    <attr name="searchViewIconTint" format="color" />
+
+    <attr name="checkBoxDaysTint" format="color" />
+    <attr name="inputFieldBackgroundColor" format="color" />
+
+    <attr name="profileImageTint" format="color" />
+    <attr name="previewImageTint" format="color" />
+    <!-- Atributos para la vista de Datos Sincronizados -->
+    <attr name="syncProfileTextColor" format="color" />
+    <attr name="syncClassesTextColor" format="color" />
+    <attr name="syncTasksTextColor" format="color" />
+    <attr name="syncLastSyncTextColor" format="color" />
+
+    <!-- Atributo para la vista de Términos y Condiciones -->
+    <attr name="termsBodyTextColor" format="color" />
+</resources>
