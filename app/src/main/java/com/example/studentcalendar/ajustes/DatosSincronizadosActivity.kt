@@ -76,8 +76,8 @@ class DatosSincronizadosActivity : AppCompatActivity() {
                         }
                     }
 
-                    binding.tvClases.text = getString(R.string.classes_synced_count_format, totalClases)
-                    binding.tvTareas.text = getString(R.string.tasks_synced_count_format, totalTareas)
+                    binding.tvClases.text = getString(R.string.classes_synced_count_format, totalClases.toString())
+                    binding.tvTareas.text = getString(R.string.tasks_synced_count_format, totalTareas.toString())
 
                     val fechaActual = dateTimeFormat.format(Date())
                     binding.tvUltimaSync.text = getString(R.string.last_cloud_check, fechaActual)

@@ -1,15 +1,18 @@
 package com.example.studentcalendar
 
+import android.app.Activity
 import android.app.Application
+import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Build
 import android.view.View
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowCompat
-import android.app.Activity
 import android.util.Log
 import com.example.studentcalendar.horariosemanal.CalendarEvent
+import com.example.studentcalendar.inicio.LoginActivity
+import com.example.studentcalendar.inicio.SplashActivity
 import com.example.studentcalendar.notificaciones.ReminderStore
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -58,14 +61,9 @@ class KalendUApplication : Application() {
             override fun onActivityCreated(activity: Activity, state: Bundle?) = Unit
             override fun onActivityPostCreated(activity: Activity, state: Bundle?) {
                 val content = activity.findViewById<View>(android.R.id.content)
-                val authScreen = activity is com.example.studentcalendar.inicio.LoginActivity ||
-                    activity is com.example.studentcalendar.inicio.SplashActivity
-                if (authScreen) {
+                if (activity is LoginActivity || activity is SplashActivity) {
                     activity.window.setBackgroundDrawableResource(R.drawable.kalendu_auth_background)
-                    WindowCompat.getInsetsController(activity.window, content).apply {
-                        isAppearanceLightStatusBars = false
-                        isAppearanceLightNavigationBars = false
-                    }
+                    WindowCompat.getInsetsController(activity.window, content).isAppearanceLightStatusBars = false
                 }
                 if (Build.VERSION.SDK_INT < 35) return
                 ViewCompat.setOnApplyWindowInsetsListener(content) { view, insets ->
@@ -76,7 +74,13 @@ class KalendUApplication : Application() {
                 }
                 ViewCompat.requestApplyInsets(content)
             }
-            override fun onActivityStarted(activity: Activity) = Unit
+            override fun onActivityStarted(activity: Activity) {
+                val nightMode = activity.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+                val authScreen = activity is LoginActivity || activity is SplashActivity
+                val window = activity.window
+                WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightNavigationBars =
+                    !authScreen && nightMode != Configuration.UI_MODE_NIGHT_YES
+            }
             override fun onActivityPaused(activity: Activity) = Unit
             override fun onActivityStopped(activity: Activity) = Unit
             override fun onActivitySaveInstanceState(activity: Activity, state: Bundle) = Unit
