@@ -38,9 +38,9 @@ KalendU reúne el horario de clases y las entregas académicas en una agenda mó
     <th>Recordatorios</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/screenshots/01-inicio.png" width="230" alt="Pantalla de inicio de KalendU"></td>
-    <td align="center"><img src="docs/images/screenshots/02-horario-semanal.png" width="230" alt="Horario semanal de clases y tareas en KalendU"></td>
-    <td align="center"><img src="docs/images/screenshots/03-recordatorios.png" width="230" alt="Lista de recordatorios programados en KalendU"></td>
+    <td align="center"><img src="docs/images/screenshots/01-inicio.jpeg" width="230" alt="Pantalla de inicio de KalendU"></td>
+    <td align="center"><img src="docs/images/screenshots/02-horario-semanal.jpeg" width="230" alt="Horario semanal de clases y tareas en KalendU"></td>
+    <td align="center"><img src="docs/images/screenshots/03-recordatorios.jpeg" width="230" alt="Lista de recordatorios programados en KalendU"></td>
   </tr>
   <tr>
     <td>Consulta el próximo evento y accede a las funciones de la agenda.</td>
@@ -58,7 +58,7 @@ Inicia sesión con Google, actualiza tu perfil y cierra sesión desde los ajuste
 <details>
 <summary>Ver pantalla de acceso</summary>
 
-<img src="docs/images/screenshots/04-inicio-sesion.png" width="260" alt="Inicio de sesión con Google en KalendU">
+<img src="docs/images/screenshots/04-inicio-sesion.jpeg" width="260" alt="Inicio de sesión con Google en KalendU">
 
 </details>
 
@@ -76,8 +76,8 @@ Registra clases con días, horas, color y repetición de hasta 26 semanas. Tambi
 <table>
   <tr><th>Nueva clase</th><th>Nueva tarea</th></tr>
   <tr>
-    <td align="center"><img src="docs/images/screenshots/05-nueva-clase.png" width="240" alt="Formulario de una clase recurrente"></td>
-    <td align="center"><img src="docs/images/screenshots/06-nueva-tarea.png" width="240" alt="Formulario de una tarea con fecha de entrega"></td>
+    <td align="center"><img src="docs/images/screenshots/05-nueva-clase.jpeg" width="240" alt="Formulario de una clase recurrente"></td>
+    <td align="center"><img src="docs/images/screenshots/06-nueva-tarea.jpeg" width="240" alt="Formulario de una tarea con fecha de entrega"></td>
   </tr>
 </table>
 
@@ -94,7 +94,7 @@ Configura con cuánta anticipación quieres recibir un aviso. La app conserva lo
 <details>
 <summary>Ver un aviso en Android</summary>
 
-<img src="docs/images/screenshots/07-notificacion-android.png" width="260" alt="Notificación de KalendU en el panel de Android">
+<img src="docs/images/screenshots/07-notificacion-android.jpeg" width="260" alt="Notificación de KalendU en el panel de Android">
 
 </details>
 
@@ -105,7 +105,7 @@ Genera una vista previa del horario semanal con clases y tareas. Desde ahí pued
 <details>
 <summary>Ver la vista previa del PDF</summary>
 
-<img src="docs/images/screenshots/08-exportacion-pdf.png" width="260" alt="Vista previa del horario semanal exportado a PDF">
+<img src="docs/images/screenshots/08-exportacion-pdf.jpeg" width="260" alt="Vista previa del horario semanal exportado a PDF">
 
 </details>
 
@@ -116,7 +116,7 @@ Cambia entre modo claro y oscuro, elige uno de los cinco idiomas disponibles y c
 <details>
 <summary>Ver ajustes en modo oscuro</summary>
 
-<img src="docs/images/screenshots/09-ajustes-modo-oscuro.png" width="260" alt="Pantalla de ajustes de KalendU en modo oscuro">
+<img src="docs/images/screenshots/09-ajustes-modo-oscuro.jpeg" width="260" alt="Pantalla de ajustes de KalendU en modo oscuro">
 
 </details>
 
